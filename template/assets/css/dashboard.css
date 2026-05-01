@@ -1,0 +1,271 @@
+/* ==========================================================
+   DASHBOARD PAGE
+   ========================================================== */
+
+.welcome-strip {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-soft) 100%);
+  border-radius: var(--radius-lg);
+  padding: 26px 30px;
+  color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-dark);
+}
+.welcome-strip::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  right: -10%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(200, 164, 93, .25), transparent 65%);
+  pointer-events: none;
+}
+.welcome-strip h2 {
+  color: #fff;
+  margin: 0 0 6px;
+  font-size: 22px;
+  letter-spacing: -.01em;
+}
+.welcome-strip p {
+  margin: 0;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, .7);
+  max-width: 540px;
+}
+.welcome-strip .btn-primary {
+  flex-shrink: 0;
+  z-index: 2;
+  position: relative;
+}
+
+/* Stat Cards */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 22px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t), box-shadow var(--t), border-color var(--t-fast);
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  opacity: 0;
+  transition: opacity var(--t);
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary);
+}
+.stat-card:hover::before { opacity: 1; }
+
+.stat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  background: var(--accent-soft);
+  color: var(--primary-dark);
+  border: 1px solid var(--accent);
+}
+.stat-icon.icon-orders { background: rgba(47, 125, 92, .1); color: var(--success); border-color: rgba(47, 125, 92, .2); }
+.stat-icon.icon-revenue { background: rgba(200, 145, 47, .1); color: var(--warning); border-color: rgba(200, 145, 47, .25); }
+.stat-icon.icon-active { background: rgba(184, 74, 58, .1); color: var(--danger); border-color: rgba(184, 74, 58, .2); }
+
+.stat-label {
+  display: block;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.stat-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Two-column section row */
+.dash-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+/* Activity card */
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.activity-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.activity-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.activity-list li:first-child { padding-top: 0; }
+
+.activity-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--primary-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  border: 1px solid var(--accent);
+}
+.activity-text {
+  flex: 1;
+  min-width: 0;
+}
+.activity-text strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text);
+}
+.activity-text small {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Quick actions */
+.quick-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background: var(--bg-white);
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all var(--t-fast);
+}
+.quick-action:last-child { margin-bottom: 0; }
+.quick-action i {
+  width: 36px;
+  height: 36px;
+  background: var(--accent-soft);
+  color: var(--primary-dark);
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.quick-action:hover {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  background: var(--accent-soft);
+  transform: translateX(4px);
+}
+
+/* Top products table */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.product-table th,
+.product-table td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 13.5px;
+  border-bottom: 1px solid var(--border);
+}
+.product-table th {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--text-muted);
+  background: var(--bg-soft);
+}
+.product-table tbody tr { transition: background var(--t-fast); }
+.product-table tbody tr:hover { background: var(--accent-soft); }
+.product-table tbody tr:last-child td { border-bottom: 0; }
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.product-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  font-size: 16px;
+  border: 1px solid var(--accent);
+  flex-shrink: 0;
+}
+.product-cell strong {
+  display: block;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 13.5px;
+}
+.product-cell span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 12px;
+}

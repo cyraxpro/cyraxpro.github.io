@@ -1,0 +1,141 @@
+/* ==========================================================
+   PRODUCTS PAGE
+   ========================================================== */
+
+/* Filters bar */
+.filters-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 18px 22px;
+  margin-bottom: 22px;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.filter-field label {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 6px;
+}
+
+.filter-field .form-control,
+.filter-field .form-select {
+  height: 42px;
+  font-size: 13.5px;
+  padding: 8px 12px;
+}
+
+.filter-field .input-with-icon {
+  position: relative;
+}
+.filter-field .input-with-icon i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 15px;
+  pointer-events: none;
+}
+.filter-field .input-with-icon .form-control {
+  padding-left: 38px;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+}
+.filter-actions .btn {
+  height: 42px;
+  padding: 0 18px;
+  white-space: nowrap;
+}
+
+/* Products table card */
+.products-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.products-card-head {
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.products-card-head h3 {
+  margin: 0 0 2px;
+  font-size: 16px;
+}
+.products-card-head p {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+/* Product price text */
+.product-price {
+  font-weight: 600;
+  color: var(--text);
+}
+.product-price small {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-top: 1px;
+}
+
+/* Active filter chips */
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 22px 0;
+  font-size: 12px;
+}
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  color: var(--primary-dark);
+  border-radius: 999px;
+  font-weight: 500;
+}
+.filter-chip button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+}
+.filter-chip button:hover { color: var(--danger); }
+
+/* Dark mode */
+.dark-mode .lx-table thead th { background: var(--bg-soft); }
+.dark-mode .pagination-bar { background: var(--bg-white); }
+.dark-mode .action-btn { background: var(--bg-soft); }

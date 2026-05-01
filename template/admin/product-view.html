@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heritage Gold Watch — Maison Luxe Admin</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Project styles -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/product-view.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Loading</div>
+  </div>
+
+  <div class="admin-wrapper">
+
+    <!-- ============== SIDEBAR ============== -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">M</span>
+        <span class="brand-text">
+          Maison Luxe
+          <small>Admin</small>
+        </span>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="menu-label">Main</li>
+        <li>
+          <a href="dashboard.html">
+            <i class="bi bi-grid-1x2"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="users.html">
+            <i class="bi bi-people"></i>
+            <span>Users</span>
+          </a>
+        </li>
+
+        <li class="menu-label">Catalog</li>
+        <li>
+          <a href="products.html" class="active">
+            <i class="bi bi-bag"></i>
+            <span>Products</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);">
+            <i class="bi bi-receipt"></i>
+            <span>Orders</span>
+          </a>
+        </li>
+        <li>
+          <a href="categories.html">
+            <i class="bi bi-tags"></i>
+            <span>Categories</span>
+          </a>
+        </li>
+
+        <li class="menu-label">System</li>
+        <li>
+          <a href="javascript:void(0);">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        &copy; 2026 Maison Luxe
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay"></div>
+
+    <!-- ============== HEADER ============== -->
+    <header class="admin-header">
+      <div class="header-left">
+        <button id="sidebarToggle" class="icon-btn js-sidebar-toggle" aria-label="Toggle sidebar">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      <div class="header-center">
+        <h1 class="page-title">Product Details</h1>
+      </div>
+
+      <div class="header-right">
+
+        <!-- Notifications -->
+        <div class="notif-dropdown">
+          <button class="icon-btn notif-toggle js-notif-toggle" aria-label="Notifications">
+            <i class="bi bi-bell"></i>
+            <span class="notif-badge">3</span>
+          </button>
+
+          <div class="notif-menu">
+            <div class="notif-head">
+              <strong>Notifications</strong>
+              <button type="button" class="mark-all js-notif-mark-all">Mark all as read</button>
+            </div>
+            <ul class="notif-list">
+              <li class="unread">
+                <span class="notif-ico green"><i class="bi bi-bag-check"></i></span>
+                <div class="notif-body">
+                  <strong>New order #38291</strong>
+                  <span>&#8377; 24,500 — 2 minutes ago</span>
+                </div>
+              </li>
+              <li class="unread">
+                <span class="notif-ico"><i class="bi bi-person-plus"></i></span>
+                <div class="notif-body">
+                  <strong>New customer registered</strong>
+                  <span>Aisha Khan — 14 minutes ago</span>
+                </div>
+              </li>
+              <li class="unread">
+                <span class="notif-ico gold"><i class="bi bi-star"></i></span>
+                <div class="notif-body">
+                  <strong>5-star review received</strong>
+                  <span>Diamond Solitaire — 1 hour ago</span>
+                </div>
+              </li>
+              <li>
+                <span class="notif-ico red"><i class="bi bi-exclamation-triangle"></i></span>
+                <div class="notif-body">
+                  <strong>Low stock alert</strong>
+                  <span>Heritage Gold Watch — 3 hours ago</span>
+                </div>
+              </li>
+            </ul>
+            <div class="notif-foot">
+              <a href="javascript:void(0);">View all notifications</a>
+            </div>
+          </div>
+        </div>
+
+        <button class="icon-btn js-theme-toggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+
+        <div class="profile-dropdown">
+          <button class="profile-toggle js-profile-toggle">
+            <span class="profile-avatar">RK</span>
+            <span class="profile-name d-none d-sm-inline">Ravi K.</span>
+            <i class="bi bi-chevron-down d-none d-sm-inline"></i>
+          </button>
+
+          <div class="profile-menu">
+            <div class="profile-menu-header">
+              <strong>Ravi Kumar</strong>
+              <span>ravi@maisonluxe.com</span>
+            </div>
+            <a href="javascript:void(0);"><i class="bi bi-person"></i> Profile</a>
+            <a href="javascript:void(0);"><i class="bi bi-shield-lock"></i> Update Password</a>
+            <div class="divider"></div>
+            <a href="login.html" class="logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============== MAIN ============== -->
+    <main class="admin-main">
+      <div class="admin-content">
+
+        <!-- Page head -->
+        <div class="page-head">
+          <div>
+            <h1>Product Details</h1>
+            <ul class="breadcrumb-custom">
+              <li><a href="dashboard.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li class="active">Heritage Gold Watch</li>
+            </ul>
+          </div>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="products.html" class="btn btn-outline">
+              <i class="bi bi-arrow-left"></i> Back
+            </a>
+            <a href="product-add.html" class="btn btn-primary">
+              <i class="bi bi-pencil"></i> Edit Product
+            </a>
+          </div>
+        </div>
+
+        <!-- ============================================
+             HERO  (gallery + key info)
+             ============================================ -->
+        <section class="pv-hero">
+
+          <!-- Gallery -->
+          <div class="pv-gallery">
+            <div class="pv-main-img">
+              <span class="pv-discount-tag">9% OFF</span>
+              <img id="pvMainImg"
+                   src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80"
+                   alt="Heritage Gold Watch" />
+              <button type="button" class="pv-zoom-btn" id="pvZoomBtn" title="View full image">
+                <i class="bi bi-arrows-fullscreen"></i>
+              </button>
+            </div>
+            <div class="pv-thumbs" id="pvThumbs">
+              <div class="pv-thumb active" data-img="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80" alt="thumb 1" />
+              </div>
+              <div class="pv-thumb" data-img="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=900&q=80">
+                <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=300&q=80" alt="thumb 2" />
+              </div>
+              <div class="pv-thumb" data-img="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=900&q=80">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=300&q=80" alt="thumb 3" />
+              </div>
+              <div class="pv-thumb" data-img="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=900&q=80">
+                <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=300&q=80" alt="thumb 4" />
+              </div>
+              <div class="pv-thumb" data-img="https://images.unsplash.com/photo-1606293459441-91b1bedf63c8?w=900&q=80">
+                <img src="https://images.unsplash.com/photo-1606293459441-91b1bedf63c8?w=300&q=80" alt="thumb 5" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="pv-info">
+            <div class="pv-info-top">
+              <div class="pv-meta-line">
+                <a href="categories.html">Watches</a>
+                <span class="sep">›</span>
+                <a href="javascript:void(0);">Maison Luxe</a>
+              </div>
+              <span class="status-pill active">Active</span>
+            </div>
+
+            <h1 class="pv-title">Heritage Gold Watch</h1>
+            <p class="pv-tagline">
+              An 18K rose-gold automatic timepiece with a Swiss movement, sapphire crystal and hand-stitched alligator strap.
+            </p>
+
+            <div class="pv-quick-meta">
+              <div><i class="bi bi-upc"></i> SKU: <strong>HGW-118</strong></div>
+              <div><i class="bi bi-calendar3"></i> Added <strong>19 Apr 2026</strong></div>
+              <div><i class="bi bi-globe"></i> ID: <strong>#PRD-002</strong></div>
+            </div>
+
+            <div class="pv-price-row">
+              <span class="pv-sale">&#8377;3,21,500</span>
+              <span class="pv-mrp">&#8377;3,55,000</span>
+              <span class="pv-save-pill"><i class="bi bi-tag"></i> Save &#8377;33,500</span>
+            </div>
+            <div class="pv-tax-note">Includes 18% GST &middot; Tax inclusive of all charges</div>
+
+            <div class="pv-stock-row">
+              <div class="stock-meter">
+                <div class="stock-label">
+                  <span><strong>In Stock</strong> — 12 units available</span>
+                  <span>40%</span>
+                </div>
+                <div class="stock-meter-bar">
+                  <span style="width: 40%"></span>
+                </div>
+              </div>
+              <span class="pill"><i class="bi bi-box-seam"></i> Warehouse: Mumbai</span>
+            </div>
+
+            <div class="pv-actions">
+              <a href="product-add.html" class="btn btn-primary">
+                <i class="bi bi-pencil"></i> Edit
+              </a>
+              <button type="button" class="btn btn-outline">
+                <i class="bi bi-files"></i> Duplicate
+              </button>
+              <button type="button" class="btn btn-outline">
+                <i class="bi bi-eye-slash"></i> Set Inactive
+              </button>
+              <button type="button" class="btn btn-outline" style="color: var(--danger); border-color: var(--border);">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================
+             STATS
+             ============================================ -->
+        <section class="pv-stats">
+          <div class="pv-stat">
+            <div class="pv-stat-ico"><i class="bi bi-eye"></i></div>
+            <div>
+              <span class="lbl">Total Views</span>
+              <span class="val">2,481</span>
+            </div>
+          </div>
+          <div class="pv-stat">
+            <div class="pv-stat-ico green"><i class="bi bi-bag-check"></i></div>
+            <div>
+              <span class="lbl">Total Sales</span>
+              <span class="val">92</span>
+            </div>
+          </div>
+          <div class="pv-stat">
+            <div class="pv-stat-ico gold"><i class="bi bi-currency-rupee"></i></div>
+            <div>
+              <span class="lbl">Revenue</span>
+              <span class="val">&#8377;29.5L</span>
+            </div>
+          </div>
+          <div class="pv-stat">
+            <div class="pv-stat-ico red"><i class="bi bi-star-fill"></i></div>
+            <div>
+              <span class="lbl">Avg Rating</span>
+              <span class="val">4.8 / 5</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================
+             DESCRIPTION + SPECIFICATIONS
+             ============================================ -->
+        <section class="pv-grid">
+
+          <div class="pv-card">
+            <div class="pv-card-head">
+              <span class="ico"><i class="bi bi-card-text"></i></span>
+              <h3>Description</h3>
+            </div>
+            <div class="pv-card-body">
+              <p>
+                Crafted in our Swiss atelier, the Heritage Gold Watch reimagines a classic tradition with
+                meticulous detail and modern engineering. Every component is finished by hand — from the
+                sun-brushed dial to the polished case-back inscription.
+              </p>
+              <p>
+                The 41 mm 18K rose-gold case houses a 25-jewel automatic movement with 60-hour power reserve.
+                The hand-stitched alligator strap is finished with a deployant clasp, while the domed sapphire
+                crystal carries an anti-reflective coating on both sides.
+              </p>
+              <p><strong>Highlights</strong></p>
+              <ul>
+                <li>18K rose-gold case &middot; 41 mm diameter &middot; 11.2 mm thick</li>
+                <li>Swiss automatic movement, 25 jewels, 60-hour power reserve</li>
+                <li>Domed sapphire crystal with double-sided AR coating</li>
+                <li>Hand-stitched Louisiana alligator strap with deployant clasp</li>
+                <li>5 ATM water resistance &middot; Lifetime craftsmanship warranty</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pv-card">
+            <div class="pv-card-head">
+              <span class="ico"><i class="bi bi-list-ul"></i></span>
+              <h3>Specifications</h3>
+            </div>
+            <div class="pv-card-body">
+              <div class="pv-specs">
+                <div><span class="k">Brand</span>     <span class="v">Maison Luxe</span></div>
+                <div><span class="k">Category</span>  <span class="v">Watches</span></div>
+                <div><span class="k">SKU</span>       <span class="v">HGW-118</span></div>
+                <div><span class="k">Material</span>  <span class="v">18K Rose Gold</span></div>
+                <div><span class="k">Movement</span>  <span class="v">Swiss Automatic</span></div>
+                <div><span class="k">Case Size</span> <span class="v">41 mm</span></div>
+                <div><span class="k">Water Res.</span><span class="v">5 ATM (50 m)</span></div>
+                <div><span class="k">Strap</span>     <span class="v">Alligator Leather</span></div>
+                <div><span class="k">Tax</span>       <span class="v">18% GST</span></div>
+                <div><span class="k">Stock</span>     <span class="v">12 units</span></div>
+                <div><span class="k">Status</span>    <span class="v"><span class="status-pill active">Active</span></span></div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ============================================
+             POLICIES
+             ============================================ -->
+        <section class="pv-policies">
+          <div class="pv-card">
+            <div class="pv-card-head">
+              <span class="ico"><i class="bi bi-arrow-counterclockwise"></i></span>
+              <h3>Return Policy</h3>
+            </div>
+            <div class="pv-card-body">
+              <p>
+                Eligible for free return within <strong>14 days</strong> of delivery. Items must be unworn,
+                unused and returned in original packaging with all certificates and tags intact.
+              </p>
+              <ul>
+                <li>Initiate return via your account or call our concierge.</li>
+                <li>Refunds are processed within 5–7 business days post inspection.</li>
+                <li>Engraved or personalised items are non-returnable.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pv-card">
+            <div class="pv-card-head">
+              <span class="ico"><i class="bi bi-truck"></i></span>
+              <h3>Shipping Policy</h3>
+            </div>
+            <div class="pv-card-body">
+              <p>
+                Complimentary insured shipping pan-India. International orders are dispatched via DHL Express
+                with full insurance and signature on delivery.
+              </p>
+              <ul>
+                <li>Domestic delivery: 2–4 business days.</li>
+                <li>International delivery: 5–9 business days.</li>
+                <li>Free luxury packaging with every order.</li>
+                <li>Real-time order tracking via SMS &amp; email.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================
+             VIDEO
+             ============================================ -->
+        <section class="pv-card pv-video-card" style="margin-bottom: 22px;">
+          <div class="pv-card-head">
+            <span class="ico"><i class="bi bi-camera-reels"></i></span>
+            <h3>Product Video</h3>
+          </div>
+          <video controls preload="metadata"
+                 poster="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&q=80">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Project JS -->
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/product-view.js"></script>
+</body>
+</html>

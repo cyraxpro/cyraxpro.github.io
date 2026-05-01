@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Maison Luxe Admin</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Project styles -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Loading</div>
+  </div>
+
+  <div class="admin-wrapper">
+
+    <!-- ============== SIDEBAR ============== -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">M</span>
+        <span class="brand-text">
+          Maison Luxe
+          <small>Admin</small>
+        </span>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="menu-label">Main</li>
+        <li>
+          <a href="dashboard.html" class="active">
+            <i class="bi bi-grid-1x2"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="users.html">
+            <i class="bi bi-people"></i>
+            <span>Users</span>
+          </a>
+        </li>
+
+        <li class="menu-label">Catalog</li>
+        <li>
+          <a href="products.html">
+            <i class="bi bi-bag"></i>
+            <span>Products</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);">
+            <i class="bi bi-receipt"></i>
+            <span>Orders</span>
+          </a>
+        </li>
+        <li>
+          <a href="categories.html">
+            <i class="bi bi-tags"></i>
+            <span>Categories</span>
+          </a>
+        </li>
+
+        <li class="menu-label">System</li>
+        <li>
+          <a href="javascript:void(0);">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        &copy; 2026 Maison Luxe
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay"></div>
+
+    <!-- ============== HEADER ============== -->
+    <header class="admin-header">
+      <div class="header-left">
+        <button id="sidebarToggle" class="icon-btn js-sidebar-toggle" aria-label="Toggle sidebar">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      <div class="header-center">
+        <h1 class="page-title">Dashboard</h1>
+      </div>
+
+      <div class="header-right">
+
+        <!-- Notifications -->
+        <div class="notif-dropdown">
+          <button class="icon-btn notif-toggle js-notif-toggle" aria-label="Notifications">
+            <i class="bi bi-bell"></i>
+            <span class="notif-badge">3</span>
+          </button>
+
+          <div class="notif-menu">
+            <div class="notif-head">
+              <strong>Notifications</strong>
+              <button type="button" class="mark-all js-notif-mark-all">Mark all as read</button>
+            </div>
+            <ul class="notif-list">
+              <li class="unread">
+                <span class="notif-ico green"><i class="bi bi-bag-check"></i></span>
+                <div class="notif-body">
+                  <strong>New order #38291</strong>
+                  <span>&#8377; 24,500 — 2 minutes ago</span>
+                </div>
+              </li>
+              <li class="unread">
+                <span class="notif-ico"><i class="bi bi-person-plus"></i></span>
+                <div class="notif-body">
+                  <strong>New customer registered</strong>
+                  <span>Aisha Khan — 14 minutes ago</span>
+                </div>
+              </li>
+              <li class="unread">
+                <span class="notif-ico gold"><i class="bi bi-star"></i></span>
+                <div class="notif-body">
+                  <strong>5-star review received</strong>
+                  <span>Diamond Solitaire — 1 hour ago</span>
+                </div>
+              </li>
+              <li>
+                <span class="notif-ico red"><i class="bi bi-exclamation-triangle"></i></span>
+                <div class="notif-body">
+                  <strong>Low stock alert</strong>
+                  <span>Heritage Gold Watch — 3 hours ago</span>
+                </div>
+              </li>
+            </ul>
+            <div class="notif-foot">
+              <a href="javascript:void(0);">View all notifications</a>
+            </div>
+          </div>
+        </div>
+
+        <button class="icon-btn js-theme-toggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+
+        <div class="profile-dropdown">
+          <button class="profile-toggle js-profile-toggle">
+            <span class="profile-avatar">RK</span>
+            <span class="profile-name d-none d-sm-inline">Ravi K.</span>
+            <i class="bi bi-chevron-down d-none d-sm-inline"></i>
+          </button>
+
+          <div class="profile-menu">
+            <div class="profile-menu-header">
+              <strong>Ravi Kumar</strong>
+              <span>ravi@maisonluxe.com</span>
+            </div>
+            <a href="javascript:void(0);"><i class="bi bi-person"></i> Profile</a>
+            <a href="javascript:void(0);"><i class="bi bi-shield-lock"></i> Update Password</a>
+            <div class="divider"></div>
+            <a href="../admin/login.html" class="logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============== MAIN ============== -->
+    <main class="admin-main">
+      <div class="admin-content">
+
+        <!-- Page head -->
+        <div class="page-head">
+          <div>
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb-custom">
+              <li><a href="dashboard.html">Home</a></li>
+              <li class="active">Dashboard</li>
+            </ul>
+          </div>
+          <button class="btn btn-primary">
+            <i class="bi bi-download"></i> Export Report
+          </button>
+        </div>
+
+        <!-- Welcome strip -->
+        <section class="welcome-strip">
+          <div>
+            <h2>Welcome back, Ravi.</h2>
+            <p>Here is a refined overview of your boutique's performance — orders, revenue, and members at a glance.</p>
+          </div>
+          <a href="product-add.html" class="btn btn-primary">
+            <i class="bi bi-plus-lg"></i> New Product
+          </a>
+        </section>
+
+        <!-- Stats -->
+        <section class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-head">
+              <span class="stat-label">Total Users</span>
+              <span class="stat-icon"><i class="bi bi-people"></i></span>
+            </div>
+            <div class="stat-value">12,486</div>
+            <div class="stat-foot">
+              <span class="pill pill-up"><i class="bi bi-arrow-up-short"></i> +12%</span>
+              <span>vs last month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-head">
+              <span class="stat-label">Total Orders</span>
+              <span class="stat-icon icon-orders"><i class="bi bi-receipt"></i></span>
+            </div>
+            <div class="stat-value">3,924</div>
+            <div class="stat-foot">
+              <span class="pill pill-up"><i class="bi bi-arrow-up-short"></i> +8.4%</span>
+              <span>vs last month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-head">
+              <span class="stat-label">Revenue</span>
+              <span class="stat-icon icon-revenue"><i class="bi bi-currency-rupee"></i></span>
+            </div>
+            <div class="stat-value">&#8377; 18.6L</div>
+            <div class="stat-foot">
+              <span class="pill pill-up"><i class="bi bi-arrow-up-short"></i> +24%</span>
+              <span>vs last month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-head">
+              <span class="stat-label">Active Users</span>
+              <span class="stat-icon icon-active"><i class="bi bi-activity"></i></span>
+            </div>
+            <div class="stat-value">1,284</div>
+            <div class="stat-foot">
+              <span class="pill pill-down"><i class="bi bi-arrow-down-short"></i> -2.1%</span>
+              <span>vs last week</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Two columns: top products + activity/quick -->
+        <section class="dash-row">
+          <div class="card-soft">
+            <div class="card-head d-flex justify-content-between align-items-center">
+              <div>
+                <h3>Top Products</h3>
+                <p>Bestsellers this month</p>
+              </div>
+              <a href="javascript:void(0);" class="btn btn-ghost">View all <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="card-body">
+              <div class="table-wrap">
+                <table class="product-table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Category</th>
+                      <th>Sold</th>
+                      <th>Revenue</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="product-cell">
+                          <span class="product-thumb"><i class="bi bi-gem"></i></span>
+                          <div>
+                            <strong>Diamond Solitaire Ring</strong>
+                            <span>SKU-DSR-204</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Rings</td>
+                      <td>148</td>
+                      <td>&#8377; 4,82,000</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="product-cell">
+                          <span class="product-thumb"><i class="bi bi-watch"></i></span>
+                          <div>
+                            <strong>Heritage Gold Watch</strong>
+                            <span>SKU-HGW-118</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Watches</td>
+                      <td>92</td>
+                      <td>&#8377; 3,21,500</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="product-cell">
+                          <span class="product-thumb"><i class="bi bi-handbag"></i></span>
+                          <div>
+                            <strong>Aurora Leather Tote</strong>
+                            <span>SKU-ALT-077</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Bags</td>
+                      <td>76</td>
+                      <td>&#8377; 1,98,200</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="product-cell">
+                          <span class="product-thumb"><i class="bi bi-droplet"></i></span>
+                          <div>
+                            <strong>Rose Oud Eau de Parfum</strong>
+                            <span>SKU-ROD-310</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Perfume</td>
+                      <td>61</td>
+                      <td>&#8377; 1,42,800</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card-soft mb-4">
+              <div class="card-head">
+                <h3>Recent Activity</h3>
+                <p>Latest events</p>
+              </div>
+              <div class="card-body">
+                <ul class="activity-list">
+                  <li>
+                    <span class="activity-dot"><i class="bi bi-bag-check"></i></span>
+                    <div class="activity-text">
+                      <strong>New order #38291 — &#8377; 24,500</strong>
+                      <small>2 minutes ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="activity-dot"><i class="bi bi-person-plus"></i></span>
+                    <div class="activity-text">
+                      <strong>New customer registered</strong>
+                      <small>14 minutes ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="activity-dot"><i class="bi bi-star"></i></span>
+                    <div class="activity-text">
+                      <strong>5-star review on "Diamond Solitaire"</strong>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="activity-dot"><i class="bi bi-truck"></i></span>
+                    <div class="activity-text">
+                      <strong>Order #38244 shipped</strong>
+                      <small>3 hours ago</small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card-soft">
+              <div class="card-head">
+                <h3>Quick Actions</h3>
+                <p>Most-used shortcuts</p>
+              </div>
+              <div class="card-body">
+                <a href="users.html" class="quick-action">
+                  <i class="bi bi-person-plus"></i>
+                  Add new user
+                </a>
+                <a href="javascript:void(0);" class="quick-action">
+                  <i class="bi bi-plus-square"></i>
+                  Add product
+                </a>
+                <a href="javascript:void(0);" class="quick-action">
+                  <i class="bi bi-receipt"></i>
+                  View orders
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Project JS -->
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

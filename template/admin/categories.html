@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categories — Maison Luxe Admin</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Project styles -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/categories.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Loading</div>
+  </div>
+
+  <div class="admin-wrapper">
+
+    <!-- ============== SIDEBAR ============== -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">M</span>
+        <span class="brand-text">
+          Maison Luxe
+          <small>Admin</small>
+        </span>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="menu-label">Main</li>
+        <li>
+          <a href="dashboard.html">
+            <i class="bi bi-grid-1x2"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="users.html">
+            <i class="bi bi-people"></i>
+            <span>Users</span>
+          </a>
+        </li>
+
+        <li class="menu-label">Catalog</li>
+        <li>
+          <a href="products.html">
+            <i class="bi bi-bag"></i>
+            <span>Products</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);">
+            <i class="bi bi-receipt"></i>
+            <span>Orders</span>
+          </a>
+        </li>
+        <li>
+          <a href="categories.html" class="active">
+            <i class="bi bi-tags"></i>
+            <span>Categories</span>
+          </a>
+        </li>
+
+        <li class="menu-label">System</li>
+        <li>
+          <a href="javascript:void(0);">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        &copy; 2026 Maison Luxe
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay"></div>
+
+    <!-- ============== HEADER ============== -->
+    <header class="admin-header">
+      <div class="header-left">
+        <button id="sidebarToggle" class="icon-btn js-sidebar-toggle" aria-label="Toggle sidebar">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      <div class="header-center">
+        <h1 class="page-title">Categories</h1>
+      </div>
+
+      <div class="header-right">
+
+        <!-- Notifications -->
+        <div class="notif-dropdown">
+          <button class="icon-btn notif-toggle js-notif-toggle" aria-label="Notifications">
+            <i class="bi bi-bell"></i>
+            <span class="notif-badge">3</span>
+          </button>
+
+          <div class="notif-menu">
+            <div class="notif-head">
+              <strong>Notifications</strong>
+              <button type="button" class="mark-all js-notif-mark-all">Mark all as read</button>
+            </div>
+            <ul class="notif-list">
+              <li class="unread">
+                <span class="notif-ico green"><i class="bi bi-bag-check"></i></span>
+                <div class="notif-body">
+                  <strong>New order #38291</strong>
+                  <span>&#8377; 24,500 — 2 minutes ago</span>
+                </div>
+              </li>
+              <li class="unread">
+                <span class="notif-ico"><i class="bi bi-person-plus"></i></span>
+                <div class="notif-body">
+                  <strong>New customer registered</strong>
+                  <span>Aisha Khan — 14 minutes ago</span>
+                </div>
+              </li>
+              <li class="unread">
+                <span class="notif-ico gold"><i class="bi bi-star"></i></span>
+                <div class="notif-body">
+                  <strong>5-star review received</strong>
+                  <span>Diamond Solitaire — 1 hour ago</span>
+                </div>
+              </li>
+              <li>
+                <span class="notif-ico red"><i class="bi bi-exclamation-triangle"></i></span>
+                <div class="notif-body">
+                  <strong>Low stock alert</strong>
+                  <span>Heritage Gold Watch — 3 hours ago</span>
+                </div>
+              </li>
+            </ul>
+            <div class="notif-foot">
+              <a href="javascript:void(0);">View all notifications</a>
+            </div>
+          </div>
+        </div>
+
+        <button class="icon-btn js-theme-toggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+
+        <div class="profile-dropdown">
+          <button class="profile-toggle js-profile-toggle">
+            <span class="profile-avatar">RK</span>
+            <span class="profile-name d-none d-sm-inline">Ravi K.</span>
+            <i class="bi bi-chevron-down d-none d-sm-inline"></i>
+          </button>
+
+          <div class="profile-menu">
+            <div class="profile-menu-header">
+              <strong>Ravi Kumar</strong>
+              <span>ravi@maisonluxe.com</span>
+            </div>
+            <a href="javascript:void(0);"><i class="bi bi-person"></i> Profile</a>
+            <a href="javascript:void(0);"><i class="bi bi-shield-lock"></i> Update Password</a>
+            <div class="divider"></div>
+            <a href="login.html" class="logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============== MAIN ============== -->
+    <main class="admin-main">
+      <div class="admin-content">
+
+        <!-- Page head -->
+        <div class="page-head">
+          <div>
+            <h1>Categories</h1>
+            <ul class="breadcrumb-custom">
+              <li><a href="dashboard.html">Home</a></li>
+              <li class="active">Categories</li>
+            </ul>
+          </div>
+          <span class="pill"><i class="bi bi-tags"></i> <span id="catCountPill">0 categories</span></span>
+        </div>
+
+        <div class="cat-layout">
+
+          <!-- ====== ADD / EDIT FORM ====== -->
+          <form class="cat-form-card" id="categoryForm" method="post" enctype="multipart/form-data">
+            <div class="cat-form-head">
+              <div>
+                <h3 id="catFormTitle">Add Category</h3>
+                <p id="catFormSubtitle">Create a new product category</p>
+              </div>
+              <span class="mode-pill" id="catFormMode">
+                <i class="bi bi-plus-circle"></i> New
+              </span>
+            </div>
+
+            <div class="cat-form-body">
+
+              <label class="cat-image-drop" id="catImageDrop" for="catImageInput">
+                <button type="button" class="clear-img" id="clearImage" title="Remove image">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="ci-preview" id="catImagePreview">
+                  <i class="bi bi-image"></i>
+                </div>
+                <strong>Drop image or click to upload</strong>
+                <span>Square / 4:3 image works best</span>
+                <input type="file" id="catImageInput" name="image" accept="image/*" hidden />
+              </label>
+
+              <div class="form-row">
+                <label class="form-label" for="catName">Category Name</label>
+                <input type="text" id="catName" name="name" class="form-control" placeholder="e.g. Watches" />
+              </div>
+
+              <div class="form-row mb-0">
+                <label class="form-label" for="catSlug">Slug <small class="text-muted-c">(optional)</small></label>
+                <input type="text" id="catSlug" name="slug" class="form-control" placeholder="auto-generated from name" />
+              </div>
+            </div>
+
+            <div class="cat-form-foot" id="catFormFoot">
+              <button type="button" class="btn btn-outline btn-cancel" id="cancelEditBtn">
+                <i class="bi bi-x-lg"></i> Cancel
+              </button>
+              <button type="submit" class="btn btn-primary" id="saveCatBtn">
+                <i class="bi bi-check2-circle"></i> <span class="btn-label">Add Category</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- ====== LIST ====== -->
+          <section class="cat-list-card">
+            <div class="cat-list-head">
+              <div>
+                <h3>All Categories</h3>
+                <p id="catListSummary">Showing 0 of 0</p>
+              </div>
+              <div class="cat-search">
+                <i class="bi bi-search"></i>
+                <input type="text" id="catSearch" class="form-control" placeholder="Search categories..." />
+              </div>
+            </div>
+
+            <div class="cat-grid" id="catGrid">
+              <!-- rendered by categories.js -->
+            </div>
+
+            <div class="cat-load-more" id="catLoadMore">
+              <span class="lm-info" id="lmInfo">Showing 0 of 0</span>
+              <span class="all-loaded">
+                <i class="bi bi-check2-circle"></i> All categories loaded
+              </span>
+              <button type="button" class="btn btn-outline" id="lmBtn">
+                <i class="bi bi-arrow-down-circle"></i>
+                <span>Load more</span>
+              </button>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Project JS -->
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/categories.js"></script>
+</body>
+</html>
