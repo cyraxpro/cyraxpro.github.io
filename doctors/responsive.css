@@ -1,0 +1,339 @@
+/* ==========================================================================
+   Medora Clinic - Responsive Stylesheet
+   All mobile / tablet / desktop responsive rules live here.
+   Pages are scoped using a body class so styles don't bleed across pages:
+     - index.html  -> body.page-home
+     - about/services/doctors/contact -> body.subpage (+ specific page class)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Mobile navbar fix (applies to every page that uses .main-navbar)
+   The shared navbar wraps brand + toggler + collapse inside a flex row,
+   which causes the open mobile menu to render inline next to the toggler.
+   Below 992px we let the row wrap so the menu drops under the brand row.
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+    .main-navbar .navbar-wrap > .d-flex {
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+
+    .main-navbar .navbar-collapse {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        order: 3;
+    }
+
+    .main-navbar .navbar-collapse .navbar-nav {
+        width: 100%;
+        margin: 4px 0 0 !important;
+        align-items: stretch;
+    }
+
+    .main-navbar .navbar-collapse .nav-item {
+        width: 100%;
+    }
+
+    .main-navbar .navbar-collapse .nav-link {
+        margin: 0;
+        padding: 10px 4px;
+        border-bottom: 1px solid rgba(20, 108, 148, 0.08);
+    }
+
+    .main-navbar .navbar-collapse .nav-item:last-child .nav-link {
+        border-bottom: 0;
+    }
+
+    .main-navbar .navbar-collapse .btn-main {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        display: inline-flex !important;
+        align-items: center;
+    }
+
+    .main-navbar .navbar-toggler {
+        padding: 6px 10px;
+    }
+}
+
+/* ==========================================================================
+   index.html (page-home) - Desktop / Tablet / Mobile rules
+   ========================================================================== */
+
+/* Tablet / small desktop */
+@media (max-width: 1199px) {
+    .page-home .carousel-3d-card:nth-child(1) {
+        transform: rotateY(0deg) translateZ(350px);
+    }
+    .page-home .carousel-3d-card:nth-child(2) {
+        transform: rotateY(60deg) translateZ(350px);
+    }
+    .page-home .carousel-3d-card:nth-child(3) {
+        transform: rotateY(120deg) translateZ(350px);
+    }
+    .page-home .carousel-3d-card:nth-child(4) {
+        transform: rotateY(180deg) translateZ(350px);
+    }
+    .page-home .carousel-3d-card:nth-child(5) {
+        transform: rotateY(240deg) translateZ(350px);
+    }
+    .page-home .carousel-3d-card:nth-child(6) {
+        transform: rotateY(300deg) translateZ(350px);
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .main-navbar .navbar-wrap {
+        border-radius: 28px;
+    }
+
+    .main-navbar .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .main-navbar .nav-link {
+        padding: 10px 0;
+    }
+
+    .page-home .hero {
+        padding-top: 135px;
+    }
+
+    .page-home .hero-visual {
+        min-height: 600px;
+        margin-top: 40px;
+    }
+
+    .page-home .doctor-card {
+        right: 50%;
+        transform: translateX(50%);
+        width: 86%;
+    }
+
+    .page-home .floating-card.one {
+        left: 4%;
+    }
+
+    .page-home .floating-card.two {
+        right: 4%;
+    }
+
+    .page-home .floating-card.three {
+        left: 10%;
+    }
+
+    .page-home .slider-shell {
+        min-height: 460px;
+        overflow: hidden;
+    }
+
+    .page-home .carousel-3d {
+        width: 260px;
+        height: 360px;
+    }
+
+    .page-home .carousel-3d-card:nth-child(1) {
+        transform: rotateY(0deg) translateZ(285px);
+    }
+    .page-home .carousel-3d-card:nth-child(2) {
+        transform: rotateY(60deg) translateZ(285px);
+    }
+    .page-home .carousel-3d-card:nth-child(3) {
+        transform: rotateY(120deg) translateZ(285px);
+    }
+    .page-home .carousel-3d-card:nth-child(4) {
+        transform: rotateY(180deg) translateZ(285px);
+    }
+    .page-home .carousel-3d-card:nth-child(5) {
+        transform: rotateY(240deg) translateZ(285px);
+    }
+    .page-home .carousel-3d-card:nth-child(6) {
+        transform: rotateY(300deg) translateZ(285px);
+    }
+
+    .page-home .cta-box {
+        padding: 44px 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .page-home .section-padding {
+        padding: 72px 0;
+    }
+
+    .page-home .section-small {
+        padding: 55px 0;
+    }
+
+    .page-home .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .page-home .hero p {
+        font-size: 16px;
+    }
+
+    .page-home .hero-actions {
+        flex-direction: column;
+    }
+
+    .page-home .hero-actions .btn-main,
+    .page-home .hero-actions .btn-light-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-home .hero-visual {
+        min-height: 520px;
+    }
+
+    .page-home .doctor-card img {
+        height: 430px;
+    }
+
+    .page-home .floating-card {
+        padding: 14px;
+    }
+
+    .page-home .floating-card.one {
+        top: 60px;
+        width: 210px;
+    }
+
+    .page-home .floating-card.two {
+        bottom: 60px;
+        width: 210px;
+    }
+
+    .page-home .floating-card.three {
+        display: none;
+    }
+
+    .page-home .intro-strip {
+        margin-top: 0;
+    }
+
+    .page-home .slider-shell {
+        min-height: 430px;
+    }
+
+    .page-home .slider-bg-ring {
+        width: 390px;
+        height: 390px;
+    }
+
+    .page-home .carousel-3d {
+        width: 225px;
+        height: 330px;
+    }
+
+    .page-home .carousel-3d-card:nth-child(1) {
+        transform: rotateY(0deg) translateZ(245px);
+    }
+    .page-home .carousel-3d-card:nth-child(2) {
+        transform: rotateY(60deg) translateZ(245px);
+    }
+    .page-home .carousel-3d-card:nth-child(3) {
+        transform: rotateY(120deg) translateZ(245px);
+    }
+    .page-home .carousel-3d-card:nth-child(4) {
+        transform: rotateY(180deg) translateZ(245px);
+    }
+    .page-home .carousel-3d-card:nth-child(5) {
+        transform: rotateY(240deg) translateZ(245px);
+    }
+    .page-home .carousel-3d-card:nth-child(6) {
+        transform: rotateY(300deg) translateZ(245px);
+    }
+
+    .page-home .carousel-info {
+        padding: 14px;
+    }
+
+    .page-home .cta-box {
+        border-radius: 28px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 575px) {
+    .page-home .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .main-navbar {
+        top: 10px;
+    }
+
+    .page-home .hero {
+        padding-top: 125px;
+    }
+
+    .page-home .hero-stat-card {
+        width: 100%;
+    }
+
+    .page-home .floating-card.one {
+        left: 0;
+    }
+
+    .page-home .floating-card.two {
+        right: 0;
+    }
+}
+
+/* ==========================================================================
+   Subpages (about / services / doctors / contact) - shared responsive rules
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .subpage .hero h1 {
+        font-size: 42px;
+    }
+
+    .subpage .section-title h2 {
+        font-size: 34px;
+    }
+
+    .subpage .cta h2 {
+        font-size: 32px;
+    }
+
+    /* services.html only */
+    .page-services .process {
+        padding: 35px;
+    }
+
+    /* contact.html only */
+    .page-contact .form-side,
+    .page-contact .info-side {
+        padding: 35px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .subpage .hero {
+        text-align: center;
+    }
+
+    .subpage .hero h1 {
+        font-size: 34px;
+    }
+
+    .subpage .cta {
+        padding: 35px;
+    }
+
+    /* contact.html only */
+    .page-contact .form-side,
+    .page-contact .info-side {
+        padding: 25px;
+    }
+}

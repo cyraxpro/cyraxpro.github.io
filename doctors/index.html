@@ -1,0 +1,1968 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Medora Clinic | Modern Physician & Healthcare Clinic</title>
+
+        <!-- Bootstrap 5.3.8 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Bootstrap Icons -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+
+        <!-- Google Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Shared Header & Footer Stylesheet -->
+        <link rel="stylesheet" href="header-footer.css" />
+
+        <!-- Responsive Stylesheet (mobile / tablet / desktop) -->
+        <link rel="stylesheet" href="responsive.css" />
+
+        <style>
+            :root {
+                --primary: #146c94;
+                --primary-dark: #0b3d5c;
+                --secondary: #19a7ce;
+                --accent: #afecff;
+                --soft: #f3fbff;
+                --white: #ffffff;
+                --text: #102a43;
+                --muted: #627d98;
+                --success: #12b886;
+                --gradient: linear-gradient(
+                    135deg,
+                    #e8faff 0%,
+                    #f8fdff 42%,
+                    #dff6ff 100%
+                );
+                --hero-gradient:
+                    radial-gradient(
+                        circle at 20% 20%,
+                        rgba(25, 167, 206, 0.24),
+                        transparent 32%
+                    ),
+                    radial-gradient(
+                        circle at 80% 5%,
+                        rgba(20, 108, 148, 0.18),
+                        transparent 28%
+                    ),
+                    linear-gradient(
+                        135deg,
+                        #f8fdff 0%,
+                        #e8faff 50%,
+                        #dff6ff 100%
+                    );
+                --shadow: 0 24px 70px rgba(16, 42, 67, 0.12);
+                --shadow-soft: 0 16px 45px rgba(16, 42, 67, 0.08);
+                --radius-xl: 34px;
+                --radius-lg: 24px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: "Inter", sans-serif;
+                color: var(--text);
+                background: #ffffff;
+                overflow-x: hidden;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            .section-padding {
+                padding: 100px 0;
+            }
+
+            .section-small {
+                padding: 70px 0;
+            }
+
+            .section-title {
+                max-width: 720px;
+                margin: 0 auto 55px;
+                text-align: center;
+            }
+
+            .section-title .eyebrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: var(--primary);
+                background: rgba(25, 167, 206, 0.1);
+                padding: 8px 16px;
+                border-radius: 999px;
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 18px;
+            }
+
+            .section-title h2 {
+                font-size: clamp(32px, 4vw, 50px);
+                font-weight: 800;
+                letter-spacing: -1.6px;
+                margin-bottom: 18px;
+            }
+
+            .section-title p {
+                color: var(--muted);
+                font-size: 17px;
+                line-height: 1.8;
+                margin: 0;
+            }
+
+            .btn-main {
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: #fff;
+                border: 0;
+                border-radius: 999px;
+                padding: 14px 26px;
+                font-weight: 700;
+                box-shadow: 0 14px 30px rgba(20, 108, 148, 0.28);
+                transition: all 0.3s ease;
+            }
+
+            .btn-main:hover {
+                color: #fff;
+                transform: translateY(-3px);
+                box-shadow: 0 22px 40px rgba(20, 108, 148, 0.35);
+            }
+
+            .btn-light-outline {
+                color: var(--primary-dark);
+                border: 1px solid rgba(20, 108, 148, 0.18);
+                background: rgba(255, 255, 255, 0.75);
+                backdrop-filter: blur(12px);
+                border-radius: 999px;
+                padding: 14px 26px;
+                font-weight: 700;
+                transition: all 0.3s ease;
+            }
+
+            .btn-light-outline:hover {
+                background: #fff;
+                transform: translateY(-3px);
+                color: var(--primary);
+                box-shadow: var(--shadow-soft);
+            }
+
+            /* Navbar / Footer styles live in header-footer.css */
+
+            /* Hero */
+            .hero {
+                min-height: 100vh;
+                padding: 150px 0 90px;
+                background: var(--hero-gradient);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero::before {
+                content: "";
+                position: absolute;
+                width: 680px;
+                height: 680px;
+                border-radius: 50%;
+                background: rgba(25, 167, 206, 0.08);
+                right: -240px;
+                top: 80px;
+                filter: blur(4px);
+            }
+
+            .hero::after {
+                content: "";
+                position: absolute;
+                width: 280px;
+                height: 280px;
+                border-radius: 50%;
+                background: rgba(18, 184, 134, 0.08);
+                left: -80px;
+                bottom: 120px;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                background: rgba(255, 255, 255, 0.85);
+                border: 1px solid rgba(20, 108, 148, 0.12);
+                padding: 9px 16px;
+                border-radius: 999px;
+                color: var(--primary);
+                font-weight: 700;
+                box-shadow: 0 12px 35px rgba(16, 42, 67, 0.07);
+                margin-bottom: 24px;
+            }
+
+            .hero h1 {
+                font-size: clamp(42px, 6vw, 78px);
+                line-height: 1.02;
+                font-weight: 800;
+                letter-spacing: -3px;
+                color: var(--primary-dark);
+                margin-bottom: 24px;
+            }
+
+            .hero h1 span {
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .hero p {
+                color: var(--muted);
+                font-size: 18px;
+                line-height: 1.85;
+                max-width: 620px;
+                margin-bottom: 34px;
+            }
+
+            .hero-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                margin-bottom: 42px;
+            }
+
+            .hero-stats {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+
+            .hero-stat-card {
+                min-width: 150px;
+                background: rgba(255, 255, 255, 0.75);
+                border: 1px solid rgba(20, 108, 148, 0.11);
+                border-radius: 22px;
+                padding: 18px;
+                box-shadow: 0 18px 35px rgba(16, 42, 67, 0.06);
+            }
+
+            .hero-stat-card h4 {
+                font-weight: 800;
+                color: var(--primary);
+                margin: 0;
+                font-size: 26px;
+            }
+
+            .hero-stat-card span {
+                color: var(--muted);
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+            .hero-visual {
+                position: relative;
+                z-index: 2;
+                min-height: 620px;
+            }
+
+            .doctor-card {
+                position: absolute;
+                right: 5%;
+                top: 45px;
+                width: 82%;
+                max-width: 500px;
+                border-radius: 42px;
+                padding: 16px;
+                background: rgba(255, 255, 255, 0.62);
+                backdrop-filter: blur(18px);
+                border: 1px solid rgba(255, 255, 255, 0.9);
+                box-shadow: var(--shadow);
+                animation: floatMain 6s ease-in-out infinite;
+            }
+
+            .doctor-card img {
+                width: 100%;
+                height: 560px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 34px;
+            }
+
+            .floating-card {
+                position: absolute;
+                z-index: 4;
+                background: rgba(255, 255, 255, 0.88);
+                backdrop-filter: blur(16px);
+                border: 1px solid rgba(20, 108, 148, 0.1);
+                border-radius: 24px;
+                padding: 18px;
+                box-shadow: var(--shadow-soft);
+                animation: floatSmall 5s ease-in-out infinite;
+            }
+
+            .floating-card.one {
+                left: 0;
+                top: 130px;
+                width: 250px;
+            }
+
+            .floating-card.two {
+                right: 0;
+                bottom: 100px;
+                width: 245px;
+                animation-delay: 1s;
+            }
+
+            .floating-card.three {
+                left: 40px;
+                bottom: 55px;
+                width: 210px;
+                animation-delay: 0.5s;
+            }
+
+            .floating-icon {
+                width: 48px;
+                height: 48px;
+                border-radius: 16px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                margin-bottom: 12px;
+            }
+
+            .floating-card h5 {
+                font-size: 16px;
+                font-weight: 800;
+                margin: 0 0 5px;
+            }
+
+            .floating-card p {
+                font-size: 13px;
+                color: var(--muted);
+                margin: 0;
+                line-height: 1.6;
+            }
+
+            @keyframes floatMain {
+                0%,
+                100% {
+                    transform: translateY(0) rotate(0deg);
+                }
+                50% {
+                    transform: translateY(-18px) rotate(0.8deg);
+                }
+            }
+
+            @keyframes floatSmall {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-14px);
+                }
+            }
+
+            /* About Intro */
+            .intro-strip {
+                margin-top: -56px;
+                position: relative;
+                z-index: 8;
+            }
+
+            .intro-panel {
+                background: #fff;
+                border-radius: var(--radius-xl);
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(20, 108, 148, 0.08);
+                overflow: hidden;
+            }
+
+            .intro-item {
+                padding: 34px;
+                height: 100%;
+                transition: all 0.3s ease;
+            }
+
+            .intro-item:hover {
+                background: var(--soft);
+            }
+
+            .intro-item .icon {
+                width: 58px;
+                height: 58px;
+                border-radius: 20px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(
+                    135deg,
+                    rgba(20, 108, 148, 0.12),
+                    rgba(25, 167, 206, 0.18)
+                );
+                color: var(--primary);
+                font-size: 26px;
+                margin-bottom: 18px;
+            }
+
+            .intro-item h4 {
+                font-weight: 800;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .intro-item p {
+                color: var(--muted);
+                margin: 0;
+                line-height: 1.7;
+            }
+
+            /* Services */
+            .services {
+                background: #fff;
+            }
+
+            .service-card {
+                height: 100%;
+                padding: 34px;
+                border-radius: var(--radius-lg);
+                background: #fff;
+                border: 1px solid rgba(20, 108, 148, 0.09);
+                box-shadow: 0 16px 35px rgba(16, 42, 67, 0.055);
+                transition: all 0.35s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .service-card::after {
+                content: "";
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                background: rgba(25, 167, 206, 0.08);
+                border-radius: 50%;
+                right: -60px;
+                top: -60px;
+                transition: all 0.35s ease;
+            }
+
+            .service-card:hover {
+                transform: translateY(-10px);
+                box-shadow: var(--shadow-soft);
+                border-color: rgba(25, 167, 206, 0.28);
+            }
+
+            .service-card:hover::after {
+                transform: scale(1.4);
+            }
+
+            .service-icon {
+                width: 66px;
+                height: 66px;
+                border-radius: 22px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: #fff;
+                font-size: 30px;
+                margin-bottom: 24px;
+                box-shadow: 0 18px 35px rgba(25, 167, 206, 0.22);
+            }
+
+            .service-card h4 {
+                font-size: 21px;
+                font-weight: 800;
+                margin-bottom: 12px;
+            }
+
+            .service-card p {
+                color: var(--muted);
+                line-height: 1.75;
+                margin-bottom: 18px;
+            }
+
+            .service-link {
+                color: var(--primary);
+                font-weight: 800;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            /* Product / Care Showcase */
+            .product-showcase {
+                background: var(--gradient);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .product-card {
+                height: 100%;
+                border-radius: 30px;
+                background: rgba(255, 255, 255, 0.84);
+                border: 1px solid rgba(255, 255, 255, 0.9);
+                box-shadow: 0 20px 55px rgba(16, 42, 67, 0.08);
+                overflow: hidden;
+                transition: all 0.35s ease;
+            }
+
+            .product-card:hover {
+                transform: translateY(-12px);
+                box-shadow: var(--shadow);
+            }
+
+            .product-img {
+                position: relative;
+                height: 245px;
+                overflow: hidden;
+                background: #e8faff;
+            }
+
+            .product-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.55s ease;
+            }
+
+            .product-card:hover .product-img img {
+                transform: scale(1.08);
+            }
+
+            .product-badge {
+                position: absolute;
+                left: 18px;
+                top: 18px;
+                background: rgba(255, 255, 255, 0.9);
+                color: var(--primary);
+                border-radius: 999px;
+                padding: 7px 13px;
+                font-size: 12px;
+                font-weight: 800;
+                backdrop-filter: blur(10px);
+            }
+
+            .product-body {
+                padding: 26px;
+            }
+
+            .product-body h4 {
+                font-size: 21px;
+                font-weight: 800;
+                margin-bottom: 10px;
+            }
+
+            .product-body p {
+                color: var(--muted);
+                line-height: 1.7;
+                margin-bottom: 20px;
+                font-size: 15px;
+            }
+
+            .product-meta {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 14px;
+                margin-bottom: 20px;
+            }
+
+            .product-price {
+                font-weight: 800;
+                color: var(--primary-dark);
+                font-size: 18px;
+            }
+
+            .product-price del {
+                color: #9fb3c8;
+                font-size: 14px;
+                margin-left: 5px;
+                font-weight: 600;
+            }
+
+            .rating {
+                color: #f59f00;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+
+            .btn-card {
+                width: 100%;
+                border-radius: 999px;
+                padding: 12px 18px;
+                border: 1px solid rgba(20, 108, 148, 0.15);
+                color: var(--primary);
+                font-weight: 800;
+                transition: all 0.3s ease;
+                background: #fff;
+            }
+
+            .btn-card:hover {
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: #fff;
+                transform: translateY(-2px);
+            }
+
+            /* 3D Slider */
+            .slider-section {
+                background: #ffffff;
+                overflow: hidden;
+            }
+
+            .slider-shell {
+                position: relative;
+                min-height: 520px;
+                perspective: 1300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .carousel-3d {
+                position: relative;
+                width: 330px;
+                height: 430px;
+                transform-style: preserve-3d;
+                animation: rotate3d 28s linear infinite;
+            }
+
+            .carousel-3d:hover {
+                animation-play-state: paused;
+            }
+
+            .carousel-3d-card {
+                position: absolute;
+                inset: 0;
+                border-radius: 34px;
+                overflow: hidden;
+                background: #fff;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(255, 255, 255, 0.8);
+            }
+
+            .carousel-3d-card:nth-child(1) {
+                transform: rotateY(0deg) translateZ(430px);
+            }
+            .carousel-3d-card:nth-child(2) {
+                transform: rotateY(60deg) translateZ(430px);
+            }
+            .carousel-3d-card:nth-child(3) {
+                transform: rotateY(120deg) translateZ(430px);
+            }
+            .carousel-3d-card:nth-child(4) {
+                transform: rotateY(180deg) translateZ(430px);
+            }
+            .carousel-3d-card:nth-child(5) {
+                transform: rotateY(240deg) translateZ(430px);
+            }
+            .carousel-3d-card:nth-child(6) {
+                transform: rotateY(300deg) translateZ(430px);
+            }
+
+            .carousel-3d-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .carousel-info {
+                position: absolute;
+                left: 18px;
+                right: 18px;
+                bottom: 18px;
+                background: rgba(255, 255, 255, 0.86);
+                backdrop-filter: blur(16px);
+                border-radius: 24px;
+                padding: 18px;
+            }
+
+            .carousel-info h4 {
+                font-size: 18px;
+                font-weight: 800;
+                margin-bottom: 6px;
+            }
+
+            .carousel-info p {
+                margin: 0;
+                color: var(--muted);
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+            @keyframes rotate3d {
+                from {
+                    transform: rotateY(0deg);
+                }
+                to {
+                    transform: rotateY(-360deg);
+                }
+            }
+
+            .slider-bg-ring {
+                position: absolute;
+                width: 570px;
+                height: 570px;
+                border-radius: 50%;
+                border: 1px dashed rgba(20, 108, 148, 0.25);
+                animation: spinRing 40s linear infinite;
+            }
+
+            .slider-bg-ring::after {
+                content: "";
+                position: absolute;
+                inset: 70px;
+                border-radius: 50%;
+                border: 1px dashed rgba(25, 167, 206, 0.2);
+            }
+
+            @keyframes spinRing {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            /* Doctors */
+            .doctor-section {
+                background: var(--gradient);
+            }
+
+            .doctor-profile-card {
+                background: #fff;
+                border-radius: 32px;
+                overflow: hidden;
+                box-shadow: var(--shadow-soft);
+                border: 1px solid rgba(20, 108, 148, 0.09);
+                transition: all 0.35s ease;
+                height: 100%;
+            }
+
+            .doctor-profile-card:hover {
+                transform: translateY(-10px);
+                box-shadow: var(--shadow);
+            }
+
+            .doctor-profile-img {
+                height: 310px;
+                overflow: hidden;
+            }
+
+            .doctor-profile-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.5s ease;
+            }
+
+            .doctor-profile-card:hover .doctor-profile-img img {
+                transform: scale(1.06);
+            }
+
+            .doctor-profile-body {
+                padding: 28px;
+            }
+
+            .doctor-profile-body h4 {
+                font-weight: 800;
+                margin-bottom: 6px;
+            }
+
+            .doctor-role {
+                color: var(--primary);
+                font-weight: 700;
+                font-size: 14px;
+                margin-bottom: 14px;
+                display: block;
+            }
+
+            .doctor-profile-body p {
+                color: var(--muted);
+                line-height: 1.7;
+                font-size: 15px;
+                margin-bottom: 18px;
+            }
+
+            .doctor-social {
+                display: flex;
+                gap: 10px;
+            }
+
+            .doctor-social a {
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--soft);
+                color: var(--primary);
+                transition: all 0.3s ease;
+            }
+
+            .doctor-social a:hover {
+                background: var(--primary);
+                color: #fff;
+                transform: translateY(-3px);
+            }
+
+            /* Process */
+            .process-card {
+                position: relative;
+                background: #fff;
+                border-radius: 28px;
+                padding: 34px;
+                box-shadow: 0 16px 40px rgba(16, 42, 67, 0.06);
+                border: 1px solid rgba(20, 108, 148, 0.08);
+                height: 100%;
+            }
+
+            .process-number {
+                width: 58px;
+                height: 58px;
+                border-radius: 19px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: #fff;
+                font-weight: 800;
+                font-size: 20px;
+                margin-bottom: 22px;
+            }
+
+            .process-card h4 {
+                font-weight: 800;
+                font-size: 21px;
+                margin-bottom: 12px;
+            }
+
+            .process-card p {
+                color: var(--muted);
+                line-height: 1.75;
+                margin: 0;
+            }
+
+            /* Testimonials */
+            .testimonial-section {
+                background: #fff;
+            }
+
+            .testimonial-card {
+                background: var(--soft);
+                border-radius: 30px;
+                padding: 34px;
+                border: 1px solid rgba(20, 108, 148, 0.08);
+                height: 100%;
+            }
+
+            .quote-icon {
+                font-size: 42px;
+                color: var(--secondary);
+                margin-bottom: 18px;
+            }
+
+            .testimonial-card p {
+                color: var(--text);
+                line-height: 1.8;
+                margin-bottom: 24px;
+                font-size: 16px;
+            }
+
+            .patient-info {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+            }
+
+            .patient-info img {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .patient-info h5 {
+                font-size: 16px;
+                font-weight: 800;
+                margin: 0;
+            }
+
+            .patient-info span {
+                color: var(--muted);
+                font-size: 13px;
+            }
+
+            /* CTA */
+            .cta-section {
+                background: var(--hero-gradient);
+                padding: 95px 0;
+            }
+
+            .cta-box {
+                position: relative;
+                overflow: hidden;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary-dark),
+                    var(--primary),
+                    var(--secondary)
+                );
+                border-radius: 42px;
+                padding: 70px;
+                color: #fff;
+                box-shadow: var(--shadow);
+            }
+
+            .cta-box::after {
+                content: "";
+                position: absolute;
+                width: 360px;
+                height: 360px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.12);
+                right: -120px;
+                top: -120px;
+            }
+
+            .cta-box h2 {
+                font-size: clamp(32px, 4vw, 54px);
+                font-weight: 800;
+                letter-spacing: -1.7px;
+                margin-bottom: 18px;
+            }
+
+            .cta-box p {
+                color: rgba(255, 255, 255, 0.82);
+                font-size: 17px;
+                line-height: 1.8;
+                max-width: 650px;
+                margin-bottom: 30px;
+            }
+
+            .cta-box .btn-light-outline {
+                background: #fff;
+                color: var(--primary);
+            }
+
+            /* Scroll animation */
+            .reveal {
+                opacity: 0;
+                transform: translateY(34px);
+                transition: all 0.8s ease;
+            }
+
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* Responsive rules live in responsive.css */
+        </style>
+    </head>
+
+    <body class="page-home">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <div class="container">
+                <div class="navbar-wrap w-100">
+                    <div
+                        class="d-flex align-items-center justify-content-between"
+                    >
+                        <a
+                            class="navbar-brand d-flex align-items-center"
+                            href="index.html"
+                        >
+                            <span class="brand-icon"
+                                ><i class="bi bi-heart-pulse-fill"></i
+                            ></span>
+                            Medora Clinic
+                        </a>
+
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mainNav"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="mainNav">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="services.html">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="doctors.html">Doctors</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+
+                            <a
+                                href="contact.html"
+                                class="btn btn-main d-none d-lg-inline-flex"
+                            >
+                                Book Appointment
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="hero-content reveal">
+                            <div class="hero-badge">
+                                <i class="bi bi-shield-check"></i>
+                                Trusted Family Physician Clinic
+                            </div>
+
+                            <h1>
+                                Modern care for your
+                                <span>healthier tomorrow.</span>
+                            </h1>
+
+                            <p>
+                                A calm, patient-first medical clinic offering
+                                primary care, preventive health checks, chronic
+                                care support, and wellness guidance with
+                                experienced physicians.
+                            </p>
+
+                            <div class="hero-actions">
+                                <a href="#" class="btn btn-main">
+                                    Schedule Consultation
+                                    <i class="bi bi-calendar-check ms-2"></i>
+                                </a>
+                                <a href="#" class="btn btn-light-outline">
+                                    Explore Services
+                                    <i class="bi bi-arrow-up-right ms-2"></i>
+                                </a>
+                            </div>
+
+                            <div class="hero-stats">
+                                <div class="hero-stat-card">
+                                    <h4>15+</h4>
+                                    <span>Years Experience</span>
+                                </div>
+                                <div class="hero-stat-card">
+                                    <h4>12k+</h4>
+                                    <span>Happy Patients</span>
+                                </div>
+                                <div class="hero-stat-card">
+                                    <h4>4.9</h4>
+                                    <span>Patient Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-visual reveal">
+                            <div class="doctor-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80"
+                                    alt="Medical physician"
+                                />
+                            </div>
+
+                            <div class="floating-card one">
+                                <div class="floating-icon">
+                                    <i class="bi bi-activity"></i>
+                                </div>
+                                <h5>Same-Day Checkups</h5>
+                                <p>
+                                    Quick diagnosis, preventive screening, and
+                                    clear treatment plans.
+                                </p>
+                            </div>
+
+                            <div class="floating-card two">
+                                <div class="floating-icon">
+                                    <i class="bi bi-capsule-pill"></i>
+                                </div>
+                                <h5>Personalized Care</h5>
+                                <p>
+                                    Care programs designed around your lifestyle
+                                    and health history.
+                                </p>
+                            </div>
+
+                            <div class="floating-card three">
+                                <div class="floating-icon">
+                                    <i class="bi bi-clock-history"></i>
+                                </div>
+                                <h5>Open 6 Days</h5>
+                                <p>
+                                    Convenient appointments with flexible clinic
+                                    hours.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Intro Strip -->
+        <section class="intro-strip">
+            <div class="container">
+                <div class="intro-panel reveal">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <div class="intro-item">
+                                <div class="icon">
+                                    <i class="bi bi-telephone-plus"></i>
+                                </div>
+                                <h4>Emergency Support</h4>
+                                <p>
+                                    Fast guidance for urgent symptoms and
+                                    immediate care recommendations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 border-start border-end">
+                            <div class="intro-item">
+                                <div class="icon">
+                                    <i class="bi bi-hospital"></i>
+                                </div>
+                                <h4>Advanced Clinic Setup</h4>
+                                <p>
+                                    Clean, modern consultation spaces with
+                                    diagnostic support facilities.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="intro-item">
+                                <div class="icon">
+                                    <i class="bi bi-person-heart"></i>
+                                </div>
+                                <h4>Family-Centered Care</h4>
+                                <p>
+                                    Healthcare support for children, adults, and
+                                    elderly family members.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services section-padding">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="eyebrow"
+                        ><i class="bi bi-plus-circle"></i> Our Medical
+                        Services</span
+                    >
+                    <h2>
+                        Complete physician care under one calm clinic
+                        experience.
+                    </h2>
+                    <p>
+                        From everyday illness to long-term wellness, our
+                        services are designed to be simple, transparent, and
+                        patient-friendly.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                            <h4>General Consultation</h4>
+                            <p>
+                                Diagnosis and treatment for fever, infections,
+                                allergies, pain, fatigue, and routine health
+                                concerns.
+                            </p>
+                            <a href="#" class="service-link"
+                                >Learn More <i class="bi bi-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-clipboard2-pulse"></i>
+                            </div>
+                            <h4>Preventive Health Checks</h4>
+                            <p>
+                                Periodic screening packages to identify early
+                                risks and maintain long-term wellness.
+                            </p>
+                            <a href="#" class="service-link"
+                                >Learn More <i class="bi bi-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-droplet-half"></i>
+                            </div>
+                            <h4>Diabetes Care</h4>
+                            <p>
+                                Blood sugar monitoring, medication planning,
+                                diet guidance, and lifestyle follow-up.
+                            </p>
+                            <a href="#" class="service-link"
+                                >Learn More <i class="bi bi-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-lungs"></i>
+                            </div>
+                            <h4>Respiratory Care</h4>
+                            <p>
+                                Support for cough, asthma, breathing discomfort,
+                                seasonal allergies, and chest infections.
+                            </p>
+                            <a href="#" class="service-link"
+                                >Learn More <i class="bi bi-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-capsule"></i>
+                            </div>
+                            <h4>Chronic Disease Care</h4>
+                            <p>
+                                Structured care plans for hypertension, thyroid
+                                issues, cholesterol, and recurring health
+                                conditions.
+                            </p>
+                            <a href="#" class="service-link"
+                                >Learn More <i class="bi bi-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-person-check"></i>
+                            </div>
+                            <h4>Senior Wellness</h4>
+                            <p>
+                                Regular follow-ups, medication review, mobility
+                                support, and preventive elderly care.
+                            </p>
+                            <a href="#" class="service-link"
+                                >Learn More <i class="bi bi-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Elegant Product / Treatment Showcase -->
+        <section class="product-showcase section-padding">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="eyebrow"
+                        ><i class="bi bi-stars"></i> Care Programs</span
+                    >
+                    <h2>Elegant healthcare packages for everyday wellness.</h2>
+                    <p>
+                        Showcase your clinic’s consultation plans, health
+                        packages, and wellness programs without cart or
+                        ecommerce functionality.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=700&q=80"
+                                    alt="Health checkup package"
+                                />
+                                <span class="product-badge">Popular</span>
+                            </div>
+                            <div class="product-body">
+                                <h4>Basic Health Check</h4>
+                                <p>
+                                    Essential consultation with vitals review
+                                    and preventive care guidance.
+                                </p>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        ₹999 <del>₹1499</del>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-card">Enquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=700&q=80"
+                                    alt="Diabetes care program"
+                                />
+                                <span class="product-badge">Care Plan</span>
+                            </div>
+                            <div class="product-body">
+                                <h4>Diabetes Care Plan</h4>
+                                <p>
+                                    Monthly physician follow-up with sugar
+                                    tracking and lifestyle support.
+                                </p>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        ₹1799 <del>₹2499</del>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-card">Enquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=700&q=80"
+                                    alt="Family care plan"
+                                />
+                                <span class="product-badge">Family</span>
+                            </div>
+                            <div class="product-body">
+                                <h4>Family Care Visit</h4>
+                                <p>
+                                    Consultation package for family health
+                                    review and wellness planning.
+                                </p>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        ₹2499 <del>₹3499</del>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-card">Enquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=700&q=80"
+                                    alt="Senior wellness package"
+                                />
+                                <span class="product-badge">Senior</span>
+                            </div>
+                            <div class="product-body">
+                                <h4>Senior Wellness</h4>
+                                <p>
+                                    Elderly care consultation with medicine
+                                    review and risk screening.
+                                </p>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        ₹1999 <del>₹2799</del>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-card">Enquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced 3D Slider -->
+        <section class="slider-section section-padding">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="eyebrow"
+                        ><i class="bi bi-boxes"></i> Advanced 3D Showcase</span
+                    >
+                    <h2>
+                        Interactive treatment showcase with premium 3D motion.
+                    </h2>
+                    <p>
+                        Hover over the slider to pause. This section can
+                        showcase treatments, clinic facilities, care programs,
+                        or featured physicians.
+                    </p>
+                </div>
+
+                <div class="slider-shell reveal">
+                    <div class="slider-bg-ring"></div>
+
+                    <div class="carousel-3d">
+                        <div class="carousel-3d-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80"
+                                alt="Medical checkup"
+                            />
+                            <div class="carousel-info">
+                                <h4>Annual Checkup</h4>
+                                <p>
+                                    Preventive health review for early risk
+                                    detection.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-3d-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1580281658626-ee379f3cce93?auto=format&fit=crop&w=800&q=80"
+                                alt="Clinic consultation"
+                            />
+                            <div class="carousel-info">
+                                <h4>Physician Consult</h4>
+                                <p>
+                                    One-to-one diagnosis and treatment planning.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-3d-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80"
+                                alt="Doctor care"
+                            />
+                            <div class="carousel-info">
+                                <h4>Chronic Care</h4>
+                                <p>Long-term support for lifestyle diseases.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-3d-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=800&q=80"
+                                alt="Laboratory tests"
+                            />
+                            <div class="carousel-info">
+                                <h4>Lab Guidance</h4>
+                                <p>
+                                    Test recommendations and report
+                                    interpretation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-3d-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                                alt="Digital healthcare"
+                            />
+                            <div class="carousel-info">
+                                <h4>Digital Records</h4>
+                                <p>
+                                    Clear treatment history and follow-up
+                                    planning.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-3d-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=800&q=80"
+                                alt="Patient care"
+                            />
+                            <div class="carousel-info">
+                                <h4>Family Wellness</h4>
+                                <p>Health support for every stage of life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors -->
+        <section class="doctor-section section-padding">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="eyebrow"
+                        ><i class="bi bi-person-badge"></i> Meet Our
+                        Physicians</span
+                    >
+                    <h2>Experienced doctors with a human-first approach.</h2>
+                    <p>
+                        Add your real clinic doctors here with specialization,
+                        experience, and appointment CTA.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="doctor-profile-card">
+                            <div class="doctor-profile-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=700&q=80"
+                                    alt="Doctor profile"
+                                />
+                            </div>
+                            <div class="doctor-profile-body">
+                                <h4>Dr. Aisha Mehra</h4>
+                                <span class="doctor-role"
+                                    >Senior Physician</span
+                                >
+                                <p>
+                                    Focused on preventive medicine, family care,
+                                    and chronic disease management.
+                                </p>
+                                <div class="doctor-social">
+                                    <a href="#"
+                                        ><i class="bi bi-linkedin"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="bi bi-twitter-x"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="bi bi-envelope"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="doctor-profile-card">
+                            <div class="doctor-profile-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&q=80"
+                                    alt="Doctor profile"
+                                />
+                            </div>
+                            <div class="doctor-profile-body">
+                                <h4>Dr. Rohan Kapoor</h4>
+                                <span class="doctor-role"
+                                    >Internal Medicine</span
+                                >
+                                <p>
+                                    Specialized in diabetes, hypertension,
+                                    thyroid, and adult health conditions.
+                                </p>
+                                <div class="doctor-social">
+                                    <a href="#"
+                                        ><i class="bi bi-linkedin"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="bi bi-twitter-x"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="bi bi-envelope"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="doctor-profile-card">
+                            <div class="doctor-profile-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=700&q=80"
+                                    alt="Doctor profile"
+                                />
+                            </div>
+                            <div class="doctor-profile-body">
+                                <h4>Dr. Naina Shah</h4>
+                                <span class="doctor-role">Family Medicine</span>
+                                <p>
+                                    Compassionate primary care for children,
+                                    adults, and senior patients.
+                                </p>
+                                <div class="doctor-social">
+                                    <a href="#"
+                                        ><i class="bi bi-linkedin"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="bi bi-twitter-x"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="bi bi-envelope"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="eyebrow"
+                        ><i class="bi bi-ui-checks-grid"></i> Simple
+                        Process</span
+                    >
+                    <h2>Care that feels easy from appointment to recovery.</h2>
+                    <p>
+                        The home page should quickly explain how a visitor can
+                        book and receive care.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="process-card">
+                            <div class="process-number">01</div>
+                            <h4>Book Visit</h4>
+                            <p>
+                                Select your preferred time and share basic
+                                health concerns before arrival.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="process-card">
+                            <div class="process-number">02</div>
+                            <h4>Consult Doctor</h4>
+                            <p>
+                                Meet our physician for diagnosis, vitals review,
+                                and clinical examination.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="process-card">
+                            <div class="process-number">03</div>
+                            <h4>Get Care Plan</h4>
+                            <p>
+                                Receive medication guidance, lifestyle advice,
+                                tests, or referral if needed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="process-card">
+                            <div class="process-number">04</div>
+                            <h4>Follow Up</h4>
+                            <p>
+                                Track progress with simple follow-ups and
+                                ongoing wellness support.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonial-section section-small">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="eyebrow"
+                        ><i class="bi bi-chat-heart"></i> Patient Stories</span
+                    >
+                    <h2>Trusted by families for reliable everyday care.</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p>
+                                The clinic feels calm and premium. The doctor
+                                explained everything clearly and gave a very
+                                practical treatment plan.
+                            </p>
+                            <div class="patient-info">
+                                <img
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                                    alt="Patient"
+                                />
+                                <div>
+                                    <h5>Priya Sharma</h5>
+                                    <span>General Consultation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p>
+                                My father’s diabetes follow-up has become much
+                                easier. The team is responsive, organized, and
+                                very professional.
+                            </p>
+                            <div class="patient-info">
+                                <img
+                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                                    alt="Patient"
+                                />
+                                <div>
+                                    <h5>Arjun Malhotra</h5>
+                                    <span>Diabetes Care</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p>
+                                Booking was simple, waiting time was low, and
+                                the physician gave proper time instead of
+                                rushing the appointment.
+                            </p>
+                            <div class="patient-info">
+                                <img
+                                    src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=200&q=80"
+                                    alt="Patient"
+                                />
+                                <div>
+                                    <h5>Meera Joshi</h5>
+                                    <span>Family Visit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-box reveal">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8">
+                            <h2>
+                                Start your wellness journey with Medora Clinic.
+                            </h2>
+                            <p>
+                                Whether you need a regular checkup, chronic care
+                                support, or a family physician, our clinic is
+                                ready to help with clear, compassionate medical
+                                guidance.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 text-lg-end">
+                            <a href="#" class="btn btn-light-outline">
+                                Book Appointment
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <h5>Medora Clinic</h5>
+                        <p>
+                            A modern physician clinic focused on primary care,
+                            preventive wellness, and long-term health support
+                            for families.
+                        </p>
+                    </div>
+
+                    <div class="col-6 col-lg-2">
+                        <h5>Pages</h5>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="doctors.html">Doctors</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-lg-2">
+                        <h5>Services</h5>
+                        <ul class="footer-links">
+                            <li><a href="services.html">General Care</a></li>
+                            <li><a href="services.html">Health Check</a></li>
+                            <li><a href="services.html">Diabetes Care</a></li>
+                            <li><a href="services.html">Senior Wellness</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <h5>Contact</h5>
+                        <p class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i> 21 Wellness
+                            Avenue, New Delhi, India
+                        </p>
+                        <p class="mb-2">
+                            <i class="bi bi-telephone me-2"></i> +91 98765 43210
+                        </p>
+                        <p class="mb-0">
+                            <i class="bi bi-envelope me-2"></i>
+                            hello@medoraclinic.com
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2"
+                >
+                    <span>© 2026 Medora Clinic. All rights reserved.</span>
+                    <span>Designed for modern physician clinic website.</span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            // Simple scroll reveal animation
+            const revealElements = document.querySelectorAll(".reveal");
+
+            function revealOnScroll() {
+                const windowHeight = window.innerHeight;
+
+                revealElements.forEach((element) => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const revealPoint = 110;
+
+                    if (elementTop < windowHeight - revealPoint) {
+                        element.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            window.addEventListener("load", revealOnScroll);
+
+            // Navbar shadow adjustment on scroll
+            const navbar = document.querySelector(".main-navbar");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.style.top = "8px";
+                } else {
+                    navbar.style.top = "16px";
+                }
+            });
+        </script>
+    </body>
+</html>

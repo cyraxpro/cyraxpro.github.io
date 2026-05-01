@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — ShopMart | Luxury Boutique</title>
+  <meta name="description" content="Sign in to your ShopMart account to access exclusive luxury collections, your wishlist, and order history." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C8A45D'%3E%3Cpath d='M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6z'/%3E%3C/svg%3E" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/resp.css" />
+</head>
+<body>
+
+  <!-- =============== PAGE LOADER =============== -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-wrap">
+      <div class="loader-spinner"></div>
+      <span class="loader-brand">Shop<span>Mart</span></span>
+    </div>
+  </div>
+
+  <!-- =============== ANNOUNCEMENT BAR =============== -->
+  <div class="announce-bar">
+    <div class="container">
+      <p><i class="fa-solid fa-truck-fast"></i> Free shipping worldwide on orders over $99 &nbsp;•&nbsp; <i class="fa-solid fa-shield-halved"></i> Secure checkout</p>
+    </div>
+  </div>
+
+  <!-- =============== HEADER =============== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-inner">
+
+          <a href="index.html" class="logo" aria-label="ShopMart Home">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Mart</span></span>
+          </a>
+
+          <form class="header-search" role="search" onsubmit="return false;" aria-label="Site search">
+            <i class="fa-solid fa-magnifying-glass header-search-icon"></i>
+            <input type="search" placeholder="Search products..." aria-label="Search products" />
+            <button type="submit" class="header-search-btn">Search</button>
+          </form>
+
+          <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <div class="header-actions">
+            <a href="#" class="action-btn" aria-label="Wishlist">
+              <i class="fa-regular fa-heart"></i>
+              <span class="badge-count" id="wishlistCount">3</span>
+            </a>
+            <a href="#" class="action-btn" aria-label="Cart">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span class="badge-count" id="cartCount">2</span>
+            </a>
+            <a href="login.html" class="action-btn action-signin" aria-label="Sign in">
+              <i class="fa-regular fa-user"></i>
+            </a>
+            <div class="auth-buttons">
+              <a href="login.html" class="btn-login active">Login</a>
+              <a href="signup.html" class="btn-signup">Signup</a>
+            </div>
+
+            <!-- User menu (logged-in) — admin will add the auth condition -->
+            <div class="user-menu" id="userMenu">
+              <button type="button" class="user-menu-toggle" aria-label="Account menu" aria-haspopup="true">
+                <span class="user-avatar">JD</span>
+                <i class="fa-solid fa-chevron-down user-chevron"></i>
+              </button>
+              <div class="user-menu-dropdown" role="menu">
+                <div class="user-menu-head">
+                  <div class="user-info">
+                    <span class="user-avatar">JD</span>
+                    <div class="user-meta">
+                      <strong>John Doe</strong>
+                      <small>john.doe@example.com</small>
+                    </div>
+                  </div>
+                </div>
+                <ul class="user-menu-list">
+                  <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+                  <li><a href="#"><i class="fa-solid fa-bag-shopping"></i> My Orders</a></li>
+                  <li><a href="#"><i class="fa-regular fa-heart"></i> Wishlist</a></li>
+                  <li><a href="#"><i class="fa-regular fa-credit-card"></i> Payment Methods</a></li>
+                  <li><a href="#"><i class="fa-solid fa-location-dot"></i> Addresses</a></li>
+                  <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-row">
+      <div class="container">
+        <nav class="main-nav" id="mainNav" aria-label="Main">
+
+          <!-- Mobile drawer head (only visible on mobile) -->
+          <div class="mobile-drawer-head">
+            <a href="index.html" class="logo">
+              <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+              <span class="logo-text">Shop<span>Mart</span></span>
+            </a>
+            <button type="button" class="mobile-drawer-close" aria-label="Close menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <ul class="nav-list">
+            <li><a href="index.html"><span class="nav-label">Home</span></a></li>
+            <li class="has-dropdown">
+              <a href="#"><span class="nav-label">Shop <i class="fa-solid fa-chevron-down"></i></span></a>
+              <ul class="dropdown-menu-custom">
+                <li><a href="product-details.html">Watches</a></li>
+                <li><a href="product-details.html">Eyewear</a></li>
+                <li><a href="product-details.html">Wallets</a></li>
+                <li><a href="product-details.html">Furniture</a></li>
+                <li><a href="product-details.html">Bracelets</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#offers"><span class="nav-label">Offers</span></a></li>
+            <li><a href="index.html#trending"><span class="nav-label">Trending</span></a></li>
+            <li><a href="#"><span class="nav-label">Journal</span></a></li>
+            <li><a href="contact.html"><span class="nav-label">Contact</span></a></li>
+          </ul>
+
+          <!-- Mobile drawer foot (only visible on mobile) -->
+          <div class="mobile-drawer-foot">
+            <a href="login.html" class="mobile-cta-btn">
+              <i class="fa-regular fa-user"></i> Sign in / Register
+            </a>
+            <div class="mobile-quick-links">
+              <a href="#"><i class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i><span>Orders</span></a>
+              <a href="contact.html"><i class="fa-solid fa-headset"></i><span>Help</span></a>
+            </div>
+            <div class="mobile-social">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="mobile-tagline">&copy; 2026 ShopMart &mdash; Crafted with care</p>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- =============== MOBILE OVERLAY =============== -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- =============== AUTH SECTION =============== -->
+  <section class="auth-section" aria-label="Sign in">
+    <div class="container">
+
+      <div class="auth-card">
+
+        <div class="auth-head">
+          <a href="index.html" class="auth-brand">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span>Shop<span>Mart</span></span>
+          </a>
+          <h1>Welcome <em>Back</em></h1>
+          <p>Sign in to continue to your boutique.</p>
+        </div>
+
+        <!-- Google sign-in -->
+        <div class="auth-social">
+          <button type="button" class="btn-social is-google">
+            <span class="btn-social-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+                <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+                <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+                <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571.001-.001.002-.001.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+              </svg>
+            </span>
+            <span>Continue with Google</span>
+          </button>
+        </div>
+
+        <div class="auth-divider"><span>or with email</span></div>
+
+        <!-- Login form -->
+        <form class="auth-form" id="loginForm">
+
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <div class="input-wrap">
+              <input type="email" id="login-email" name="email" placeholder="you@example.com" autocomplete="email" />
+              <i class="fa-regular fa-envelope input-icon"></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <div class="input-wrap">
+              <input type="password" id="login-password" name="password" placeholder="Enter your password" autocomplete="current-password" />
+              <i class="fa-solid fa-lock input-icon"></i>
+              <button type="button" class="password-toggle" data-target="login-password" aria-label="Show password">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-form-meta">
+            <label class="form-check">
+              <input type="checkbox" name="remember" />
+              <span class="checkmark"></span>
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary-custom auth-submit">
+            Sign In <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p class="auth-switch">
+            Don't have an account?<a href="signup.html">Create one</a>
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Mart</span></span>
+          </a>
+          <p>A curated boutique for premium fashion, accessories, watches, furniture and more. Quality crafted by artisans.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Journal</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="product-details.html">Watches</a></li>
+            <li><a href="product-details.html">Eyewear</a></li>
+            <li><a href="product-details.html">Wallets</a></li>
+            <li><a href="product-details.html">Furniture</a></li>
+            <li><a href="product-details.html">Bracelets</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Get in Touch</h3>
+          <ul class="contact-info">
+            <li><i class="fa-solid fa-location-dot"></i> 123 Boutique St, NY 10001</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fa-solid fa-envelope"></i> support@shopmart.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ShopMart Boutique. All rights reserved.</p>
+        <ul class="footer-legal">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============== BACK TO TOP =============== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- =============== TOAST =============== -->
+  <div class="toast-msg" id="toastMsg">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText">Added to cart!</span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

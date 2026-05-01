@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bhujia Bite – Authentic, crispy, handcrafted Indian bhujia. A burst of spice in every bite." />
+  <title>Bhujia Bite — Crispy. Spicy. Iconic.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Swiper for 3D slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS (scroll animations) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ============================== -->
+  <!-- Page Loader                    -->
+  <!-- ============================== -->
+  <div class="bb-loader" id="bbLoader">
+    <div class="loader-ring">
+      <span></span><span></span><span></span>
+    </div>
+    <p class="loader-text">Bhujia Bite</p>
+  </div>
+
+  <!-- ============================== -->
+  <!-- Navigation                     -->
+  <!-- ============================== -->
+  <nav class="navbar navbar-expand-lg fixed-top bb-navbar" id="bbNav">
+    <div class="container">
+      <a class="navbar-brand bb-brand" href="#">
+        <span class="brand-icon">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 3 C9 3 4 9 4 16 C4 23 9 29 16 29 C23 29 28 23 28 16 C28 9 23 3 16 3 Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M10 12 Q16 18 22 12 M10 18 Q16 24 22 18" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>Bhujia <em>Bite</em></span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="bb-toggler"><span></span><span></span><span></span></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn bb-btn-primary" href="#products">
+              Shop Range <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================== -->
+  <!-- HERO / BANNER                  -->
+  <!-- ============================== -->
+  <section class="bb-hero" id="home">
+    <!-- Animated gradient blobs -->
+    <div class="hero-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Floating spice particles -->
+    <div class="spice-field" id="spiceField"></div>
+
+    <!-- Marquee strip top -->
+    <div class="hero-strip">
+      <div class="strip-track">
+        <span>Crispy Bites</span><i class="bi bi-asterisk"></i>
+        <span>Handcrafted Spice</span><i class="bi bi-asterisk"></i>
+        <span>Authentic Bikaneri</span><i class="bi bi-asterisk"></i>
+        <span>Made With Love</span><i class="bi bi-asterisk"></i>
+        <span>Crispy Bites</span><i class="bi bi-asterisk"></i>
+        <span>Handcrafted Spice</span><i class="bi bi-asterisk"></i>
+        <span>Authentic Bikaneri</span><i class="bi bi-asterisk"></i>
+        <span>Made With Love</span><i class="bi bi-asterisk"></i>
+      </div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="row align-items-center g-5">
+        <!-- Left: Text -->
+        <div class="col-lg-6">
+          <div class="hero-tag" data-aos="fade-up">
+            <span class="dot"></span> India&rsquo;s most-loved crispy bite
+          </div>
+
+          <h1 class="hero-title">
+            <span class="line"><span class="word">A</span> <span class="word">burst</span> <span class="word">of</span></span>
+            <span class="line"><span class="word italic">spice</span> <span class="word">in</span> <span class="word">every</span></span>
+            <span class="line"><span class="word gradient-text">crunchy</span> <span class="word">bite.</span></span>
+          </h1>
+
+          <p class="hero-sub" data-aos="fade-up" data-aos-delay="600">
+            Slow-cooked in pure ghee. Hand-tossed with heirloom spices. Bhujia Bite brings home the legendary taste of Bikaner — crisp, fiery, unforgettable.
+          </p>
+
+          <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+            <a href="#products" class="btn bb-btn-primary btn-lg">
+              Explore Flavours <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="#story" class="btn bb-btn-ghost btn-lg">
+              <span class="play-ico"><i class="bi bi-play-fill"></i></span>
+              Our Story
+            </a>
+          </div>
+
+          <div class="hero-stats" data-aos="fade-up" data-aos-delay="1000">
+            <div class="stat">
+              <h3 data-count="50">0</h3><span>+ Years Legacy</span>
+            </div>
+            <div class="divider"></div>
+            <div class="stat">
+              <h3 data-count="120">0</h3><span>+ Cities Served</span>
+            </div>
+            <div class="divider"></div>
+            <div class="stat">
+              <h3 data-count="98">0</h3><span>% Pure Ghee</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 3D Hero Product Stage -->
+        <div class="col-lg-6">
+          <div class="hero-stage" id="heroStage">
+
+            <!-- Spotlight glow behind packet -->
+            <div class="hero-spotlight"></div>
+
+            <!-- Rotating dotted text ring -->
+            <div class="hero-ring hero-ring-outer"></div>
+            <div class="hero-ring hero-ring-inner"></div>
+
+            <!-- Orbit container with rotating ingredients -->
+            <div class="orbit" id="orbitWrap">
+              <!-- Chilli -->
+              <span class="orbit-item orbit-chilli" style="--angle:0deg;--r:230px;">
+                <svg viewBox="0 0 64 80">
+                  <path d="M16 8 C24 6 32 10 34 18 C44 24 56 38 60 60 C58 70 50 74 44 70 C28 60 18 46 14 32 C8 28 4 20 8 12 C8 8 12 6 16 8 Z" fill="url(#cg1)"/>
+                  <path d="M16 8 C20 4 28 4 30 10" stroke="#2D6A4F" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                  <path d="M22 22 Q34 32 48 56" stroke="#FFE082" stroke-width="2" fill="none" opacity=".5"/>
+                  <defs>
+                    <linearGradient id="cg1" x1="0" x2="1" y1="0" y2="1">
+                      <stop offset="0" stop-color="#E63946"/>
+                      <stop offset="1" stop-color="#9D0208"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <!-- Peanut -->
+              <span class="orbit-item orbit-peanut" style="--angle:60deg;--r:240px;">
+                <svg viewBox="0 0 60 80">
+                  <path d="M30 4 C42 4 50 14 48 26 C46 32 46 38 50 48 C54 62 46 76 30 76 C14 76 6 62 10 48 C14 38 14 32 12 26 C10 14 18 4 30 4 Z" fill="url(#pg1)"/>
+                  <circle cx="30" cy="20" r="2" fill="#7A4F2A" opacity=".5"/>
+                  <circle cx="26" cy="40" r="2" fill="#7A4F2A" opacity=".5"/>
+                  <circle cx="34" cy="55" r="2" fill="#7A4F2A" opacity=".5"/>
+                  <defs>
+                    <linearGradient id="pg1" x1="0" x2="1" y1="0" y2="1">
+                      <stop offset="0" stop-color="#E8B97D"/>
+                      <stop offset="1" stop-color="#A06B3A"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <!-- Sev strands cluster -->
+              <span class="orbit-item orbit-sev" style="--angle:120deg;--r:235px;">
+                <svg viewBox="0 0 80 80">
+                  <g stroke="#FB8500" stroke-width="3" fill="none" stroke-linecap="round">
+                    <path d="M10 20 Q30 10 50 22 T78 18"/>
+                    <path d="M8 36 Q28 28 48 38 T76 36" stroke="#FFB703"/>
+                    <path d="M12 52 Q32 44 52 54 T78 52" stroke="#F77F00"/>
+                    <path d="M10 68 Q30 60 50 70 T78 68" stroke="#FB8500"/>
+                  </g>
+                </svg>
+              </span>
+              <!-- Star -->
+              <span class="orbit-item orbit-star" style="--angle:180deg;--r:225px;">
+                <svg viewBox="0 0 64 64">
+                  <path d="M32 4 L38 24 L60 26 L42 40 L48 60 L32 48 L16 60 L22 40 L4 26 L26 24 Z" fill="url(#sg1)"/>
+                  <defs>
+                    <linearGradient id="sg1" x1="0" x2="1" y1="0" y2="1">
+                      <stop offset="0" stop-color="#FFD60A"/>
+                      <stop offset="1" stop-color="#F77F00"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <!-- Leaf -->
+              <span class="orbit-item orbit-leaf" style="--angle:240deg;--r:230px;">
+                <svg viewBox="0 0 64 64">
+                  <path d="M32 6 C 14 14 8 30 18 50 C 30 56 50 50 56 32 C 52 18 44 10 32 6 Z" fill="url(#lg1)"/>
+                  <path d="M32 6 C 30 22 26 38 18 50" stroke="#1B4332" stroke-width="2" fill="none"/>
+                  <defs>
+                    <linearGradient id="lg1" x1="0" x2="1" y1="0" y2="1">
+                      <stop offset="0" stop-color="#74C69D"/>
+                      <stop offset="1" stop-color="#2D6A4F"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <!-- Spice cube -->
+              <span class="orbit-item orbit-cube" style="--angle:300deg;--r:235px;">
+                <svg viewBox="0 0 64 64">
+                  <rect x="12" y="12" width="40" height="40" rx="8" fill="url(#cbg)" transform="rotate(15 32 32)"/>
+                  <defs>
+                    <linearGradient id="cbg" x1="0" x2="1" y1="0" y2="1">
+                      <stop offset="0" stop-color="#FCA311"/>
+                      <stop offset="1" stop-color="#D62828"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+            </div>
+
+            <!-- Hero Product Packet -->
+            <div class="hero-pack-wrap" id="heroPackWrap">
+              <div class="hero-pack-shadow"></div>
+              <div class="hero-pack" id="heroPack">
+                <div class="hp-shine"></div>
+                <div class="hp-top"></div>
+                <div class="hp-body">
+                  <div class="hp-ribbon">
+                    <i class="bi bi-fire"></i> Bestseller
+                  </div>
+                  <span class="hp-brand">Bhujia Bite</span>
+                  <span class="hp-tagline">— since 1975 —</span>
+                  <span class="hp-name">Bikaneri<br/>Sev</span>
+                  <div class="hp-illust">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="hp-meta">
+                    <span class="hp-pure"><i class="bi bi-droplet-fill"></i> 100% Pure Ghee</span>
+                    <span class="hp-weight">Net 200 g</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating info chips -->
+            <div class="hero-chip h-chip-1">
+              <span class="chip-ico ci-1"><i class="bi bi-fire"></i></span>
+              <div>
+                <strong>Hot &amp; Fiery</strong>
+                <small>Bikaneri spice</small>
+              </div>
+            </div>
+            <div class="hero-chip h-chip-2">
+              <span class="chip-ico ci-2"><i class="bi bi-droplet-half"></i></span>
+              <div>
+                <strong>Pure Ghee</strong>
+                <small>No palm oil</small>
+              </div>
+            </div>
+            <div class="hero-chip h-chip-3">
+              <span class="chip-ico ci-3"><i class="bi bi-award-fill"></i></span>
+              <div>
+                <strong>Award-Winning</strong>
+                <small>Authentic taste</small>
+              </div>
+            </div>
+
+            <!-- Crunch sparkle bursts -->
+            <span class="sparkle sp-1"></span>
+            <span class="sparkle sp-2"></span>
+            <span class="sparkle sp-3"></span>
+            <span class="sparkle sp-4"></span>
+            <span class="sparkle sp-5"></span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <a href="#about" class="scroll-cue">
+      <span>Scroll</span>
+      <span class="cue-line"></span>
+    </a>
+  </section>
+
+  <!-- ============================== -->
+  <!-- ABOUT SNIPPET                  -->
+  <!-- ============================== -->
+  <section class="bb-about" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="about-visual">
+            <div class="visual-card v-1">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80&auto=format&fit=crop" alt="Indian spices" onerror="this.style.display='none'"/>
+              <div class="visual-fallback v-fall-1"></div>
+            </div>
+            <div class="visual-card v-2">
+              <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80&auto=format&fit=crop" alt="Spicy snack" onerror="this.style.display='none'"/>
+              <div class="visual-fallback v-fall-2"></div>
+            </div>
+            <div class="visual-badge">
+              <div class="badge-rotate">
+                <svg viewBox="0 0 200 200">
+                  <defs>
+                    <path id="circle" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"/>
+                  </defs>
+                  <text fill="#fff" font-size="18" letter-spacing="4">
+                    <textPath xlink:href="#circle">SINCE 1975 &bull; AUTHENTIC TASTE &bull; MADE IN BIKANER &bull;</textPath>
+                  </text>
+                </svg>
+              </div>
+              <div class="badge-core">
+                <i class="bi bi-fire"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+          <span class="eyebrow">Our Story</span>
+          <h2 class="section-title">
+            Crafted in <span class="gradient-text">Bikaner.</span><br/>
+            Loved <span class="italic">everywhere.</span>
+          </h2>
+          <p class="lead-text">
+            For over five decades, the secret recipe of Bhujia Bite has travelled from a tiny clay-walled kitchen in Bikaner to thousands of homes around the world. Every strand of sev is hand-rolled, every spice is hand-pounded — because shortcuts ruin stories.
+          </p>
+
+          <div class="row g-3 mt-2">
+            <div class="col-sm-6">
+              <div class="feature-mini">
+                <span class="fm-icon"><i class="bi bi-droplet-half"></i></span>
+                <div>
+                  <h5>Pure Desi Ghee</h5>
+                  <p>No palm oil, ever. Only farm-fresh ghee for that golden crisp.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-mini">
+                <span class="fm-icon"><i class="bi bi-flower2"></i></span>
+                <div>
+                  <h5>Heirloom Spices</h5>
+                  <p>Sun-dried chillies and stone-ground masalas from family farms.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-mini">
+                <span class="fm-icon"><i class="bi bi-hand-thumbs-up"></i></span>
+                <div>
+                  <h5>Hand-Crafted</h5>
+                  <p>No machines for the magic. Every batch tasted before it ships.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-mini">
+                <span class="fm-icon"><i class="bi bi-shield-check"></i></span>
+                <div>
+                  <h5>FSSAI Approved</h5>
+                  <p>Hygiene-certified kitchens with modern packaging tech.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#story" class="btn bb-btn-primary mt-4">
+            Read Full Story <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- PRODUCTS — 3D SLIDER           -->
+  <!-- ============================== -->
+  <section class="bb-products" id="products">
+    <!-- Decorative blob -->
+    <div class="prod-blob prod-blob-1"></div>
+    <div class="prod-blob prod-blob-2"></div>
+
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="eyebrow">Featured Range</span>
+          <h2 class="section-title">
+            Pick your <span class="gradient-text">perfect crunch.</span>
+          </h2>
+        </div>
+        <div class="col-lg-5 text-lg-end" data-aos="fade-up" data-aos-delay="150">
+          <p class="lead-text mb-0">
+            From the iconic Bikaneri Sev to fiery Aloo Bhujia — explore our bestsellers in this immersive 3D showcase.
+          </p>
+        </div>
+      </div>
+
+      <!-- Swiper 3D -->
+      <div class="swiper bb-swiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <article class="product-card" style="--p1:#FFB703;--p2:#FB8500;">
+              <div class="pc-bg"></div>
+              <div class="pc-tag">Bestseller</div>
+              <div class="pc-image">
+                <div class="pc-pack">
+                  <div class="pack-top"></div>
+                  <div class="pack-body">
+                    <span class="pack-brand">Bhujia Bite</span>
+                    <span class="pack-name">Bikaneri<br/>Sev</span>
+                    <div class="pack-illust">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <span class="pack-weight">200 g</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pc-info">
+                <h3>Bikaneri Sev</h3>
+                <p>The classic. Hair-thin sev fried in ghee with secret spice.</p>
+                <div class="pc-meta">
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                  <span class="price">&#8377; 120</span>
+                </div>
+                <button class="btn bb-btn-primary w-100">
+                  View Details <i class="bi bi-arrow-up-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <article class="product-card" style="--p1:#E63946;--p2:#9D0208;">
+              <div class="pc-bg"></div>
+              <div class="pc-tag hot">Hot</div>
+              <div class="pc-image">
+                <div class="pc-pack">
+                  <div class="pack-top"></div>
+                  <div class="pack-body">
+                    <span class="pack-brand">Bhujia Bite</span>
+                    <span class="pack-name">Aloo<br/>Bhujia</span>
+                    <div class="pack-illust">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <span class="pack-weight">200 g</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pc-info">
+                <h3>Aloo Bhujia</h3>
+                <p>Crisp potato strands kissed with red chilli &amp; black salt.</p>
+                <div class="pc-meta">
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.8</span>
+                  <span class="price">&#8377; 110</span>
+                </div>
+                <button class="btn bb-btn-primary w-100">
+                  View Details <i class="bi bi-arrow-up-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <article class="product-card" style="--p1:#06A77D;--p2:#005377;">
+              <div class="pc-bg"></div>
+              <div class="pc-tag new">New</div>
+              <div class="pc-image">
+                <div class="pc-pack">
+                  <div class="pack-top"></div>
+                  <div class="pack-body">
+                    <span class="pack-brand">Bhujia Bite</span>
+                    <span class="pack-name">Pudina<br/>Sev</span>
+                    <div class="pack-illust">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <span class="pack-weight">180 g</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pc-info">
+                <h3>Pudina Sev</h3>
+                <p>Refreshing mint-tossed sev with a zesty lemon kick.</p>
+                <div class="pc-meta">
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.7</span>
+                  <span class="price">&#8377; 130</span>
+                </div>
+                <button class="btn bb-btn-primary w-100">
+                  View Details <i class="bi bi-arrow-up-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <article class="product-card" style="--p1:#7209B7;--p2:#3A0CA3;">
+              <div class="pc-bg"></div>
+              <div class="pc-tag">Premium</div>
+              <div class="pc-image">
+                <div class="pc-pack">
+                  <div class="pack-top"></div>
+                  <div class="pack-body">
+                    <span class="pack-brand">Bhujia Bite</span>
+                    <span class="pack-name">Royal<br/>Mix</span>
+                    <div class="pack-illust">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <span class="pack-weight">250 g</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pc-info">
+                <h3>Royal Namkeen Mix</h3>
+                <p>Eight-spice royal blend with cashew, raisin &amp; mathri.</p>
+                <div class="pc-meta">
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                  <span class="price">&#8377; 220</span>
+                </div>
+                <button class="btn bb-btn-primary w-100">
+                  View Details <i class="bi bi-arrow-up-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <article class="product-card" style="--p1:#F77F00;--p2:#D62828;">
+              <div class="pc-bg"></div>
+              <div class="pc-tag hot">Spicy</div>
+              <div class="pc-image">
+                <div class="pc-pack">
+                  <div class="pack-top"></div>
+                  <div class="pack-body">
+                    <span class="pack-brand">Bhujia Bite</span>
+                    <span class="pack-name">Tikha<br/>Mix</span>
+                    <div class="pack-illust">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <span class="pack-weight">200 g</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pc-info">
+                <h3>Tikha Lal Mix</h3>
+                <p>For the brave. Triple-chilli explosion with masala twist.</p>
+                <div class="pc-meta">
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.8</span>
+                  <span class="price">&#8377; 140</span>
+                </div>
+                <button class="btn bb-btn-primary w-100">
+                  View Details <i class="bi bi-arrow-up-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <article class="product-card" style="--p1:#FFD60A;--p2:#FFC300;">
+              <div class="pc-bg"></div>
+              <div class="pc-tag">Classic</div>
+              <div class="pc-image">
+                <div class="pc-pack">
+                  <div class="pack-top"></div>
+                  <div class="pack-body">
+                    <span class="pack-brand">Bhujia Bite</span>
+                    <span class="pack-name">Moong<br/>Dal</span>
+                    <div class="pack-illust">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <span class="pack-weight">200 g</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pc-info">
+                <h3>Moong Dal Crunch</h3>
+                <p>Salted moong dal with hint of black pepper. Tea-time hero.</p>
+                <div class="pc-meta">
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.7</span>
+                  <span class="price">&#8377; 100</span>
+                </div>
+                <button class="btn bb-btn-primary w-100">
+                  View Details <i class="bi bi-arrow-up-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Custom nav -->
+      <div class="bb-swiper-nav">
+        <button class="swiper-prev" aria-label="Previous">
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <button class="swiper-next" aria-label="Next">
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- SHOP BY FLAVOUR — Simple Grid  -->
+  <!-- ============================== -->
+  <section class="bb-shop">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="eyebrow">Complete Range</span>
+          <h2 class="section-title">
+            Shop by <span class="gradient-text">flavour.</span>
+          </h2>
+          <p class="lead-text mb-0">A quick scroll through the entire family — find your favourite crunch in seconds.</p>
+        </div>
+        <div class="col-lg-5 text-lg-end" data-aos="fade-up" data-aos-delay="150">
+          <div class="shop-filters" role="tablist">
+            <button class="filter-pill active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="classic">Classic</button>
+            <button class="filter-pill" data-filter="spicy">Spicy</button>
+            <button class="filter-pill" data-filter="new">New</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 shop-grid">
+        <!-- Item 1 -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-cat="classic">
+          <article class="shop-card" style="--c1:#FFB703;--c2:#FB8500;">
+            <div class="sc-tag">Bestseller</div>
+            <div class="sc-img">
+              <div class="sc-pack" style="background:linear-gradient(160deg,#FFB703,#FB8500);">
+                <span class="sc-name">Bikaneri Sev</span>
+                <div class="sc-strands">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="sc-w">200g</span>
+              </div>
+            </div>
+            <div class="sc-info">
+              <div class="sc-row">
+                <h4>Bikaneri Sev</h4>
+                <span class="sc-rate"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <p>Hair-thin sev fried in pure ghee. The original classic.</p>
+              <div class="sc-foot">
+                <span class="sc-price">&#8377; 120</span>
+                <button class="sc-btn"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-cat="spicy">
+          <article class="shop-card" style="--c1:#E63946;--c2:#9D0208;">
+            <div class="sc-tag hot">Hot</div>
+            <div class="sc-img">
+              <div class="sc-pack" style="background:linear-gradient(160deg,#E63946,#9D0208);">
+                <span class="sc-name">Aloo Bhujia</span>
+                <div class="sc-strands">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="sc-w">200g</span>
+              </div>
+            </div>
+            <div class="sc-info">
+              <div class="sc-row">
+                <h4>Aloo Bhujia</h4>
+                <span class="sc-rate"><i class="bi bi-star-fill"></i> 4.8</span>
+              </div>
+              <p>Crisp potato strands kissed with red chilli &amp; black salt.</p>
+              <div class="sc-foot">
+                <span class="sc-price">&#8377; 110</span>
+                <button class="sc-btn"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-cat="new">
+          <article class="shop-card" style="--c1:#06A77D;--c2:#005377;">
+            <div class="sc-tag new">New</div>
+            <div class="sc-img">
+              <div class="sc-pack" style="background:linear-gradient(160deg,#06A77D,#005377);">
+                <span class="sc-name">Pudina Sev</span>
+                <div class="sc-strands">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="sc-w">180g</span>
+              </div>
+            </div>
+            <div class="sc-info">
+              <div class="sc-row">
+                <h4>Pudina Sev</h4>
+                <span class="sc-rate"><i class="bi bi-star-fill"></i> 4.7</span>
+              </div>
+              <p>Refreshing mint-tossed sev with a zesty lemon kick.</p>
+              <div class="sc-foot">
+                <span class="sc-price">&#8377; 130</span>
+                <button class="sc-btn"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-cat="classic">
+          <article class="shop-card" style="--c1:#7209B7;--c2:#3A0CA3;">
+            <div class="sc-tag">Premium</div>
+            <div class="sc-img">
+              <div class="sc-pack" style="background:linear-gradient(160deg,#7209B7,#3A0CA3);">
+                <span class="sc-name">Royal Mix</span>
+                <div class="sc-strands">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="sc-w">250g</span>
+              </div>
+            </div>
+            <div class="sc-info">
+              <div class="sc-row">
+                <h4>Royal Namkeen</h4>
+                <span class="sc-rate"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <p>Eight-spice blend with cashew, raisin &amp; mathri.</p>
+              <div class="sc-foot">
+                <span class="sc-price">&#8377; 220</span>
+                <button class="sc-btn"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-cat="spicy">
+          <article class="shop-card" style="--c1:#F77F00;--c2:#D62828;">
+            <div class="sc-tag hot">Spicy</div>
+            <div class="sc-img">
+              <div class="sc-pack" style="background:linear-gradient(160deg,#F77F00,#D62828);">
+                <span class="sc-name">Tikha Mix</span>
+                <div class="sc-strands">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="sc-w">200g</span>
+              </div>
+            </div>
+            <div class="sc-info">
+              <div class="sc-row">
+                <h4>Tikha Lal Mix</h4>
+                <span class="sc-rate"><i class="bi bi-star-fill"></i> 4.8</span>
+              </div>
+              <p>For the brave. Triple-chilli explosion with masala twist.</p>
+              <div class="sc-foot">
+                <span class="sc-price">&#8377; 140</span>
+                <button class="sc-btn"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-cat="classic">
+          <article class="shop-card" style="--c1:#FFD60A;--c2:#FFC300;">
+            <div class="sc-tag">Classic</div>
+            <div class="sc-img">
+              <div class="sc-pack" style="background:linear-gradient(160deg,#FFD60A,#FFC300);">
+                <span class="sc-name" style="color:#5A1A0A;">Moong Dal</span>
+                <div class="sc-strands">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="sc-w" style="color:#5A1A0A;border-color:rgba(90,26,10,.3);">200g</span>
+              </div>
+            </div>
+            <div class="sc-info">
+              <div class="sc-row">
+                <h4>Moong Dal Crunch</h4>
+                <span class="sc-rate"><i class="bi bi-star-fill"></i> 4.7</span>
+              </div>
+              <p>Salted moong dal with hint of black pepper. Tea-time hero.</p>
+              <div class="sc-foot">
+                <span class="sc-price">&#8377; 100</span>
+                <button class="sc-btn"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="#" class="btn bb-btn-ghost btn-lg">
+          View All Products <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- HOW IT'S MADE — Process        -->
+  <!-- ============================== -->
+  <section class="bb-process">
+    <div class="process-bg"></div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="eyebrow">From Kitchen To Pack</span>
+          <h2 class="section-title">
+            How a perfect bite is <span class="gradient-text">made.</span>
+          </h2>
+          <p class="lead-text mb-0">Four generations. Four secrets. Four reasons why every Bhujia Bite tastes like home.</p>
+        </div>
+      </div>
+
+      <div class="process-track">
+        <div class="process-line"></div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+            <div class="step-card">
+              <div class="step-num"><span>01</span></div>
+              <i class="bi bi-flower2 step-ico"></i>
+              <h4>Heirloom Spices</h4>
+              <p>Sun-dried Bikaneri chillies, hand-picked black pepper and stone-ground masalas from family farms.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+            <div class="step-card">
+              <div class="step-num"><span>02</span></div>
+              <i class="bi bi-droplet-half step-ico"></i>
+              <h4>Pure Ghee Bath</h4>
+              <p>Slow-simmered in farm-fresh desi ghee — no palm oil, no shortcuts, no compromise on taste.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+            <div class="step-card">
+              <div class="step-num"><span>03</span></div>
+              <i class="bi bi-fire step-ico"></i>
+              <h4>Hand-Tossed Crisp</h4>
+              <p>Each batch is hand-tossed at the perfect temperature for that signature golden crunch.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="360">
+            <div class="step-card">
+              <div class="step-num"><span>04</span></div>
+              <i class="bi bi-box-seam step-ico"></i>
+              <h4>Sealed Fresh</h4>
+              <p>Nitrogen-flushed packs sealed within 24 hours — fresh crunch all the way to your plate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- PERFECT PAIRINGS               -->
+  <!-- ============================== -->
+  <section class="bb-pairings">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+          <span class="eyebrow">Snack Goals</span>
+          <h2 class="section-title">
+            Crunchy with chai. Crispy with <span class="gradient-text">cocktails.</span>
+          </h2>
+          <p class="lead-text">Bhujia Bite isn&rsquo;t just a snack — it&rsquo;s the perfect partner for every moment.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up">
+          <div class="pair-card">
+            <div class="pair-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M14 22 H46 V42 C46 50 40 56 30 56 C20 56 14 50 14 42 Z" fill="url(#cha)"/>
+                <path d="M46 26 C54 26 56 32 54 38 C52 42 48 42 46 40" stroke="#8B4513" stroke-width="2.5" fill="none"/>
+                <path d="M22 12 C22 8 26 8 26 12 M30 10 C30 6 34 6 34 10 M38 12 C38 8 42 8 42 12" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/>
+                <defs>
+                  <linearGradient id="cha" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0" stop-color="#D4A574"/>
+                    <stop offset="1" stop-color="#8B4513"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h5>Masala Chai</h5>
+            <p>The classic combo. Pair Bikaneri Sev with cardamom chai for the perfect 4 PM ritual.</p>
+            <span class="pair-time"><i class="bi bi-clock"></i> Tea-time hero</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="pair-card">
+            <div class="pair-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M16 14 L48 14 L40 36 L24 36 Z" fill="url(#mart)"/>
+                <line x1="32" y1="36" x2="32" y2="54" stroke="#FFB703" stroke-width="3"/>
+                <ellipse cx="32" cy="55" rx="14" ry="3" fill="#FFB703"/>
+                <circle cx="38" cy="20" r="3" fill="#52B788"/>
+                <defs>
+                  <linearGradient id="mart" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0" stop-color="#FCA311"/>
+                    <stop offset="1" stop-color="#F77F00"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h5>Cocktail Hour</h5>
+            <p>Tikha Mix &amp; gin-tonic. The grown-up snack moment your evenings deserve.</p>
+            <span class="pair-time"><i class="bi bi-moon-stars"></i> Evening vibes</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="pair-card">
+            <div class="pair-icon">
+              <svg viewBox="0 0 64 64">
+                <ellipse cx="32" cy="40" rx="22" ry="14" fill="url(#bow)"/>
+                <ellipse cx="32" cy="34" rx="22" ry="6" fill="#FCA311"/>
+                <path d="M14 34 H50" stroke="#9D0208" stroke-width="2"/>
+                <circle cx="22" cy="32" r="2" fill="#9D0208"/>
+                <circle cx="32" cy="30" r="2" fill="#9D0208"/>
+                <circle cx="42" cy="32" r="2" fill="#9D0208"/>
+                <defs>
+                  <linearGradient id="bow" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0" stop-color="#5A1A0A"/>
+                    <stop offset="1" stop-color="#1A0F0A"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h5>Bhel Topper</h5>
+            <p>Sprinkle Aloo Bhujia over bhel puri for that next-level chatpata kick everyone craves.</p>
+            <span class="pair-time"><i class="bi bi-bookmark-star"></i> Street-food magic</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="pair-card">
+            <div class="pair-icon">
+              <svg viewBox="0 0 64 64">
+                <rect x="14" y="14" width="36" height="36" rx="6" fill="url(#gift)"/>
+                <rect x="14" y="28" width="36" height="6" fill="#FFD60A"/>
+                <rect x="29" y="14" width="6" height="36" fill="#FFD60A"/>
+                <path d="M22 14 C18 8 14 8 16 14 M42 14 C46 8 50 8 48 14" stroke="#FFD60A" stroke-width="3" fill="none"/>
+                <defs>
+                  <linearGradient id="gift" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#D62828"/>
+                    <stop offset="1" stop-color="#9D0208"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h5>Festive Gifting</h5>
+            <p>Diwali, Holi, Rakhi — our hand-tied hampers turn every festival into a celebration.</p>
+            <span class="pair-time"><i class="bi bi-gift"></i> Hampers from &#8377; 599</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- WHY US                         -->
+  <!-- ============================== -->
+  <section class="bb-why" id="story">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+          <span class="eyebrow">Why Bhujia Bite</span>
+          <h2 class="section-title">
+            Where every bite has a <span class="gradient-text">tale to tell.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up">
+          <div class="why-card">
+            <div class="wc-num">01</div>
+            <i class="bi bi-fire wc-ico"></i>
+            <h4>Slow-Fired Crunch</h4>
+            <p>Cooked in small batches for that signature crispness in every strand.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-card">
+            <div class="wc-num">02</div>
+            <i class="bi bi-flower1 wc-ico"></i>
+            <h4>Stone-Ground Spices</h4>
+            <p>Aroma that travels — straight from heirloom mills to your packet.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="why-card">
+            <div class="wc-num">03</div>
+            <i class="bi bi-truck wc-ico"></i>
+            <h4>Fresh, Always</h4>
+            <p>Sealed within 24 hours. Delivered crunchy across 120+ cities.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="why-card">
+            <div class="wc-num">04</div>
+            <i class="bi bi-heart-fill wc-ico"></i>
+            <h4>Made With Love</h4>
+            <p>Three generations of family — one promise of authentic taste.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- TESTIMONIALS                   -->
+  <!-- ============================== -->
+  <section class="bb-testimonials">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6" data-aos="fade-up">
+          <span class="eyebrow">Word on the street</span>
+          <h2 class="section-title">
+            Loved by <span class="gradient-text">snack lovers.</span>
+          </h2>
+        </div>
+        <div class="col-lg-6 text-lg-end" data-aos="fade-up" data-aos-delay="150">
+          <div class="big-rating">
+            <div>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="mb-0"><strong>4.9 / 5</strong> from 8,200+ reviews</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="t-card">
+            <i class="bi bi-quote q"></i>
+            <p>“Reminds me of the bhujia my dadi used to make. Crunch, spice, story — all in one packet.”</p>
+            <div class="t-meta">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#F77F00,#D62828)">A</div>
+              <div>
+                <h6>Anaya Gupta</h6>
+                <span>Mumbai</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="t-card">
+            <i class="bi bi-quote q"></i>
+            <p>“The Royal Mix is dangerously good. Every guest at our Diwali asked where we got it.”</p>
+            <div class="t-meta">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#7209B7,#3A0CA3)">R</div>
+              <div>
+                <h6>Rohan Mehta</h6>
+                <span>Delhi NCR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="t-card">
+            <i class="bi bi-quote q"></i>
+            <p>“Pudina Sev with chai? Honestly the best evening I&rsquo;ve had this week. 10/10.”</p>
+            <div class="t-meta">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#06A77D,#005377)">P</div>
+              <div>
+                <h6>Priya Iyer</h6>
+                <span>Bengaluru</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- CTA STRIP                      -->
+  <!-- ============================== -->
+  <section class="bb-cta-strip" id="contact">
+    <div class="container">
+      <div class="cta-card" data-aos="zoom-in">
+        <div class="cta-spark cs-1"></div>
+        <div class="cta-spark cs-2"></div>
+        <div class="cta-spark cs-3"></div>
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2>Hungry for a story-worthy snack?</h2>
+            <p>Get the full range delivered fresh to your doorstep — spice level optional.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="#products" class="btn bb-btn-light btn-lg">
+              Shop Now <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- FOOTER                         -->
+  <!-- ============================== -->
+  <footer class="bb-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand bb-brand mb-3 d-inline-flex" href="#">
+            <span class="brand-icon">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M16 3 C9 3 4 9 4 16 C4 23 9 29 16 29 C23 29 28 23 28 16 C28 9 23 3 16 3 Z" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M10 12 Q16 18 22 12 M10 18 Q16 24 22 18" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span>Bhujia <em>Bite</em></span>
+          </a>
+          <p class="f-desc">Slow-cooked crunch and heirloom spice — delivered with love from Bikaner to your home.</p>
+          <div class="f-social">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Explore</h6>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#story">Our Story</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Support</h6>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6>Get crispy news</h6>
+          <p class="f-desc">Subscribe for new flavour drops &amp; festive boxes.</p>
+          <form class="f-form" onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'bi bi-check2\'></i> Subscribed';">
+            <input type="email" placeholder="your@email.com" required />
+            <button type="submit"><i class="bi bi-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>&copy; <span id="year"></span> Bhujia Bite. Crafted with crunch in Bikaner.</p>
+        <div class="f-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================== -->
+  <!-- OFFER POPUP                    -->
+  <!-- ============================== -->
+  <div class="bb-popup" id="bbPopup" aria-hidden="true">
+    <div class="popup-backdrop" data-popup-close></div>
+    <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <button class="popup-close" data-popup-close aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <div class="popup-grid">
+        <!-- Left Visual -->
+        <div class="popup-visual">
+          <div class="pop-glow"></div>
+          <div class="pop-rings">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="pop-pack">
+            <div class="pop-pack-top"></div>
+            <div class="pop-pack-body">
+              <span>Bhujia Bite</span>
+              <strong>20% OFF</strong>
+              <em>Welcome treat</em>
+            </div>
+          </div>
+          <span class="pop-spark s1">&#10022;</span>
+          <span class="pop-spark s2">&#10022;</span>
+          <span class="pop-spark s3">&#10022;</span>
+        </div>
+
+        <!-- Right Content -->
+        <div class="popup-content">
+          <span class="pop-eyebrow">
+            <i class="bi bi-fire"></i> Festive Drop &mdash; Limited Time
+          </span>
+          <h3 id="popupTitle">Hot off the press: <span class="gradient-text">20% OFF</span> your first crunch!</h3>
+          <p>Subscribe for free recipes &amp; new flavour drops, and we&rsquo;ll send you a discount code instantly.</p>
+
+          <form class="pop-form" id="popForm">
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="btn bb-btn-primary">
+              Claim 20% OFF <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+
+          <ul class="pop-perks">
+            <li><i class="bi bi-check-circle-fill"></i> Free shipping above &#8377;499</li>
+            <li><i class="bi bi-check-circle-fill"></i> Exclusive festive hampers</li>
+            <li><i class="bi bi-check-circle-fill"></i> No spam, just crunch</li>
+          </ul>
+
+          <button type="button" class="pop-skip" data-popup-close>No thanks, I&rsquo;ll pass on the crunch.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== -->
+  <!-- Scripts                        -->
+  <!-- ============================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
