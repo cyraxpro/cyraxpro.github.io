@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shop the Heritage Chrono Gold timepiece — a premium hand-crafted watch with sapphire crystal, automatic movement and lifetime authenticity." />
+  <meta name="theme-color" content="#C8A45D" />
+
+  <title>Heritage Chrono Gold | ShopMart</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%8D%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/product-details.css" />
+  <link rel="stylesheet" href="css/resp.css" />
+</head>
+
+<body>
+
+  <!-- =============== PAGE LOADER =============== -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-wrap">
+      <div class="loader-spinner"></div>
+      <span class="loader-brand">Shop<span>Mart</span></span>
+    </div>
+  </div>
+
+  <!-- =============== ANNOUNCEMENT =============== -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p>Complimentary shipping on orders over $200 &nbsp;|&nbsp; Use code <strong>LUXE10</strong> for 10% off your first order</p>
+    </div>
+  </div>
+
+  <!-- =============== HEADER =============== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-inner">
+          <a href="index.html" class="logo" aria-label="ShopMart Home">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Mart</span></span>
+          </a>
+          <form class="header-search" role="search" onsubmit="return false;" aria-label="Site search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="search" placeholder="Search products..." aria-label="Search products" />
+            <button type="submit" class="search-submit" aria-label="Search"><span class="search-submit-text">Search</span><i class="fa-solid fa-magnifying-glass search-submit-icon"></i></button>
+          </form>
+          <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="header-actions">
+            <a href="#" class="action-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><span class="badge-count">3</span></a>
+            <a href="#" class="action-btn" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">5</span></a>
+            <a href="login.html" class="action-btn action-signin" aria-label="Sign in"><i class="fa-regular fa-user"></i></a>
+            <div class="auth-buttons">
+              <a href="login.html" class="btn-login">Login</a>
+              <a href="signup.html" class="btn-signup">Signup</a>
+            </div>
+
+            <!-- User menu (logged-in) — admin will add the auth condition -->
+            <div class="user-menu" id="userMenu">
+              <button type="button" class="user-menu-toggle" aria-label="Account menu" aria-haspopup="true">
+                <span class="user-avatar">JD</span>
+                <i class="fa-solid fa-chevron-down user-chevron"></i>
+              </button>
+              <div class="user-menu-dropdown" role="menu">
+                <div class="user-menu-head">
+                  <div class="user-info">
+                    <span class="user-avatar">JD</span>
+                    <div class="user-meta">
+                      <strong>John Doe</strong>
+                      <small>john.doe@example.com</small>
+                    </div>
+                  </div>
+                </div>
+                <ul class="user-menu-list">
+                  <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+                  <li><a href="#"><i class="fa-solid fa-bag-shopping"></i> My Orders</a></li>
+                  <li><a href="#"><i class="fa-regular fa-heart"></i> Wishlist</a></li>
+                  <li><a href="#"><i class="fa-regular fa-credit-card"></i> Payment Methods</a></li>
+                  <li><a href="#"><i class="fa-solid fa-location-dot"></i> Addresses</a></li>
+                  <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav-row">
+      <div class="container">
+        <nav class="main-nav" id="mainNav" aria-label="Main">
+
+          <!-- Mobile drawer head (only visible on mobile) -->
+          <div class="mobile-drawer-head">
+            <a href="index.html" class="logo">
+              <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+              <span class="logo-text">Shop<span>Mart</span></span>
+            </a>
+            <button type="button" class="mobile-drawer-close" aria-label="Close menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <ul class="nav-list">
+            <li><a href="index.html"><span class="nav-label">Home</span></a></li>
+            <li class="has-dropdown">
+              <a href="shop.html" class="active"><span class="nav-label">Shop <i class="fa-solid fa-chevron-down"></i></span></a>
+              <ul class="dropdown-menu-custom">
+                <li><a href="shop.html?cat=watches">Watches</a></li>
+                <li><a href="shop.html?cat=eyewear">Eyewear</a></li>
+                <li><a href="shop.html?cat=bags">Wallets</a></li>
+                <li><a href="shop.html?cat=furniture">Furniture</a></li>
+                <li><a href="shop.html?cat=accessories">Bracelets</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#offers"><span class="nav-label">Offers</span></a></li>
+            <li><a href="index.html#trending"><span class="nav-label">Trending</span></a></li>
+            <li><a href="#"><span class="nav-label">Journal</span></a></li>
+            <li><a href="contact.html"><span class="nav-label">Contact</span></a></li>
+          </ul>
+
+          <!-- Mobile drawer foot (only visible on mobile) -->
+          <div class="mobile-drawer-foot">
+            <a href="login.html" class="mobile-cta-btn">
+              <i class="fa-regular fa-user"></i> Sign in / Register
+            </a>
+            <div class="mobile-quick-links">
+              <a href="#"><i class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i><span>Orders</span></a>
+              <a href="contact.html"><i class="fa-solid fa-headset"></i><span>Help</span></a>
+            </div>
+            <div class="mobile-social">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="mobile-tagline">&copy; 2026 ShopMart &mdash; Crafted with care</p>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- =============== BREADCRUMB =============== -->
+  <div class="breadcrumb-wrap">
+    <div class="container">
+      <ul class="breadcrumb-list" aria-label="Breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Watches</a></li>
+        <li>Heritage Chrono Gold</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =============== PRODUCT DETAIL =============== -->
+  <section class="pd-section">
+    <div class="container">
+      <div class="pd-grid">
+
+        <!-- LEFT: Gallery -->
+        <div class="pd-gallery">
+          <div class="pd-main-img" id="pdMainImg">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80" alt="Heritage Chrono Gold timepiece" id="pdMainImgEl" />
+            <span class="pd-discount-badge">-20%</span>
+            <button class="pd-zoom-trigger" aria-label="Zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+          </div>
+
+          <div class="pd-thumbs" id="pdThumbs">
+            <button class="pd-thumb active" data-img="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80" aria-label="View 1">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&q=80" alt="View 1" />
+            </button>
+            <button class="pd-thumb" data-img="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=900&q=80" aria-label="View 2">
+              <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=200&q=80" alt="View 2" />
+            </button>
+            <button class="pd-thumb" data-img="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=80" aria-label="View 3">
+              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=200&q=80" alt="View 3" />
+            </button>
+            <button class="pd-thumb" data-img="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=900&q=80" aria-label="View 4">
+              <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=200&q=80" alt="View 4" />
+            </button>
+            <button class="pd-thumb" data-img="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=900&q=80" aria-label="View 5">
+              <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=200&q=80" alt="View 5" />
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Info -->
+        <div class="pd-info">
+          <span class="pd-cat">Accessories / Watches</span>
+          <h1 class="pd-name">Heritage Chrono <em>Gold</em></h1>
+
+          <div class="pd-meta-row">
+            <div class="pd-rating">
+              <span class="pd-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              <span class="pd-review-count">(124 reviews)</span>
+            </div>
+            <span class="pd-stock in-stock"><i class="fa-solid fa-circle-check"></i> In Stock</span>
+            <span class="pd-sku">SKU: <strong>SM-WT-1249</strong></span>
+          </div>
+
+          <div class="pd-price-row">
+            <span class="pd-price-now">$1,249.00</span>
+            <span class="pd-price-old">$1,549.00</span>
+            <span class="pd-save">Save $300</span>
+          </div>
+
+          <p class="pd-short-desc">A premium hand-crafted timepiece featuring sapphire crystal glass, Swiss automatic movement, and a genuine Italian leather strap. Designed for those who appreciate timeless detail.</p>
+
+          <!-- Color options -->
+          <div class="pd-option">
+            <span class="pd-option-label">Color: <strong id="selectedColor">Champagne Gold</strong></span>
+            <div class="pd-colors" role="radiogroup" aria-label="Choose color">
+              <button type="button" class="pd-color active" data-color="Champagne Gold" style="--c: #C8A45D" aria-label="Champagne Gold"></button>
+              <button type="button" class="pd-color" data-color="Midnight Black" style="--c: #1a1a1a" aria-label="Midnight Black"></button>
+              <button type="button" class="pd-color" data-color="Steel Silver" style="--c: #B0B0B0" aria-label="Steel Silver"></button>
+              <button type="button" class="pd-color" data-color="Rose Gold" style="--c: #B76E79" aria-label="Rose Gold"></button>
+            </div>
+          </div>
+
+          <!-- Variant selector -->
+          <div class="pd-option">
+            <span class="pd-option-label">Size / Variant</span>
+            <div class="pd-variants" role="radiogroup" aria-label="Choose variant">
+              <button type="button" class="pd-variant active">38mm</button>
+              <button type="button" class="pd-variant">40mm</button>
+              <button type="button" class="pd-variant">42mm</button>
+              <button type="button" class="pd-variant disabled" disabled>44mm</button>
+            </div>
+          </div>
+
+          <!-- Quantity + Buttons -->
+          <div class="pd-buy-row">
+            <div class="pd-quantity" aria-label="Quantity">
+              <button type="button" class="qty-btn" id="qtyMinus" aria-label="Decrease">−</button>
+              <input type="number" id="qtyInput" value="1" min="1" max="99" aria-label="Quantity" />
+              <button type="button" class="qty-btn" id="qtyPlus" aria-label="Increase">+</button>
+            </div>
+            <button type="button" class="btn btn-dark-custom pd-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button type="button" class="btn btn-primary-custom pd-buy-btn">Buy Now</button>
+          </div>
+
+          <div class="pd-actions-row">
+            <button type="button" class="pd-icon-btn pd-wishlist"><i class="fa-regular fa-heart"></i> Wishlist</button>
+            <button type="button" class="pd-icon-btn"><i class="fa-solid fa-arrows-left-right"></i> Compare</button>
+            <div class="pd-share">
+              <span>Share:</span>
+              <a href="#" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Share on Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" aria-label="Share on Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+              <a href="#" aria-label="Copy link"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="pd-trust">
+            <div class="pd-trust-item"><i class="fa-solid fa-truck-fast"></i><span>Free shipping over $200</span></div>
+            <div class="pd-trust-item"><i class="fa-solid fa-rotate-left"></i><span>30-day easy returns</span></div>
+            <div class="pd-trust-item"><i class="fa-solid fa-shield-halved"></i><span>2-year warranty</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== TABS =============== -->
+  <section class="pd-tabs-section">
+    <div class="container">
+      <div class="pd-tabs">
+        <div class="pd-tab-nav" role="tablist">
+          <button class="pd-tab-btn active" data-tab="desc" role="tab" aria-selected="true">Description</button>
+          <button class="pd-tab-btn" data-tab="reviews" role="tab" aria-selected="false">Reviews <span class="pd-tab-count">124</span></button>
+          <button class="pd-tab-btn" data-tab="shipping" role="tab" aria-selected="false">Shipping &amp; Returns</button>
+        </div>
+
+        <div class="pd-tab-panes">
+
+          <!-- Description -->
+          <div class="pd-tab-pane active" id="desc">
+            <div class="pd-desc-grid">
+              <div>
+                <h3>Crafted For The Discerning</h3>
+                <p>The Heritage Chrono Gold is more than a watch — it's a statement of refined taste. Hand-assembled by Swiss artisans, each piece undergoes 90+ quality checks before leaving the atelier.</p>
+                <p>From the polished 18k gold-plated case to the supple Italian leather strap, every detail has been considered. The Swiss automatic movement is visible through an exhibition caseback, a window into 200+ years of horological tradition.</p>
+                <ul class="pd-feature-list">
+                  <li><i class="fa-solid fa-check"></i> Sapphire crystal glass with anti-reflective coating</li>
+                  <li><i class="fa-solid fa-check"></i> Swiss automatic movement with 42-hour reserve</li>
+                  <li><i class="fa-solid fa-check"></i> Hand-stitched Italian leather strap</li>
+                  <li><i class="fa-solid fa-check"></i> Water-resistant up to 50 meters</li>
+                  <li><i class="fa-solid fa-check"></i> Lifetime authenticity guarantee</li>
+                </ul>
+              </div>
+              <div class="pd-desc-img">
+                <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=800&q=80" alt="Watch detail" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews -->
+          <div class="pd-tab-pane" id="reviews">
+            <div class="pd-review-summary">
+              <div class="pd-rating-big">
+                <span class="big-num">4.8</span>
+                <div>
+                  <span class="pd-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                  <p>Based on 124 reviews</p>
+                </div>
+              </div>
+              <button class="btn btn-outline-custom" id="openReviewModal" type="button">Write a Review</button>
+            </div>
+
+            <div class="pd-review-list">
+              <article class="pd-review">
+                <div class="pd-review-head">
+                  <img src="https://i.pravatar.cc/80?img=12" alt="Sarah M" />
+                  <div>
+                    <h4>Sarah M.</h4>
+                    <span class="pd-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    <small>Verified Buyer · 2 weeks ago</small>
+                  </div>
+                </div>
+                <p>"Absolutely stunning. The gold finish is rich without feeling ostentatious. Pairs beautifully with both formal and casual outfits."</p>
+              </article>
+              <article class="pd-review">
+                <div class="pd-review-head">
+                  <img src="https://i.pravatar.cc/80?img=33" alt="James L" />
+                  <div>
+                    <h4>James L.</h4>
+                    <span class="pd-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    <small>Verified Buyer · 1 month ago</small>
+                  </div>
+                </div>
+                <p>"The packaging alone is worth it — true luxury experience. The watch itself runs perfectly accurate. Excellent purchase."</p>
+              </article>
+              <article class="pd-review">
+                <div class="pd-review-head">
+                  <img src="https://i.pravatar.cc/80?img=47" alt="Emma R" />
+                  <div>
+                    <h4>Emma R.</h4>
+                    <span class="pd-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <small>Verified Buyer · 2 months ago</small>
+                  </div>
+                </div>
+                <p>"Beautiful watch, great value for the price. The strap was a touch stiff at first but broke in beautifully after a few weeks."</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Shipping -->
+          <div class="pd-tab-pane" id="shipping">
+            <div class="pd-shipping-grid">
+              <div>
+                <h3><i class="fa-solid fa-truck-fast"></i> Shipping Policy</h3>
+                <p>We offer complimentary shipping on all orders above $200. Standard delivery takes 3–5 business days; express delivery (1–2 business days) is available at checkout.</p>
+                <ul class="pd-feature-list">
+                  <li><i class="fa-solid fa-check"></i> Free standard shipping over $200</li>
+                  <li><i class="fa-solid fa-check"></i> Express delivery available (1–2 days)</li>
+                  <li><i class="fa-solid fa-check"></i> Tracked &amp; insured worldwide</li>
+                  <li><i class="fa-solid fa-check"></i> Premium gift packaging included</li>
+                </ul>
+              </div>
+              <div>
+                <h3><i class="fa-solid fa-rotate-left"></i> Return Policy</h3>
+                <p>Not perfectly happy? Return any unworn item within 30 days for a full refund — we'll even cover the return shipping. Personalised items are non-returnable.</p>
+                <ul class="pd-feature-list">
+                  <li><i class="fa-solid fa-check"></i> 30-day no-questions return</li>
+                  <li><i class="fa-solid fa-check"></i> Free return shipping label</li>
+                  <li><i class="fa-solid fa-check"></i> Refund processed within 5 business days</li>
+                  <li><i class="fa-solid fa-check"></i> 2-year manufacturer's warranty</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Mart</span></span>
+          </a>
+          <p>A curated boutique for premium fashion, accessories, watches, furniture and more. Quality crafted by artisans.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Journal</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="shop.html?cat=watches">Watches</a></li>
+            <li><a href="shop.html?cat=eyewear">Eyewear</a></li>
+            <li><a href="shop.html?cat=bags">Wallets</a></li>
+            <li><a href="shop.html?cat=furniture">Furniture</a></li>
+            <li><a href="shop.html?cat=accessories">Bracelets</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Get in Touch</h3>
+          <ul class="contact-info">
+            <li><i class="fa-solid fa-location-dot"></i> 123 Boutique St, NY 10001</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fa-solid fa-envelope"></i> support@shopmart.com</li>
+            <li><i class="fa-solid fa-clock"></i> Mon - Fri: 9AM - 8PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShopMart. All rights reserved.</p>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa" aria-label="Visa"></i>
+          <i class="fa-brands fa-cc-mastercard" aria-label="MasterCard"></i>
+          <i class="fa-brands fa-cc-paypal" aria-label="PayPal"></i>
+          <i class="fa-brands fa-cc-amex" aria-label="American Express"></i>
+          <i class="fa-brands fa-cc-apple-pay" aria-label="Apple Pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <div class="toast-msg" id="toastMsg">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText">Added to cart!</span>
+  </div>
+
+  <!-- =============== WRITE-A-REVIEW MODAL =============== -->
+  <div class="review-modal-overlay" id="reviewModal" aria-hidden="true">
+    <div class="review-modal-box" role="dialog" aria-labelledby="reviewModalTitle">
+      <button type="button" class="review-modal-close" id="reviewModalClose" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="review-modal-head">
+        <h3 id="reviewModalTitle">Write A <em>Review</em></h3>
+        <p>Share your thoughts about this product with other customers.</p>
+      </div>
+
+      <form class="review-form" id="reviewForm">
+        <div class="form-group">
+          <label>Your Rating <span>*</span></label>
+          <div class="rating-input" id="ratingInput" data-value="0">
+            <button type="button" class="star-btn" data-value="1" aria-label="1 star"><i class="fa-solid fa-star"></i></button>
+            <button type="button" class="star-btn" data-value="2" aria-label="2 stars"><i class="fa-solid fa-star"></i></button>
+            <button type="button" class="star-btn" data-value="3" aria-label="3 stars"><i class="fa-solid fa-star"></i></button>
+            <button type="button" class="star-btn" data-value="4" aria-label="4 stars"><i class="fa-solid fa-star"></i></button>
+            <button type="button" class="star-btn" data-value="5" aria-label="5 stars"><i class="fa-solid fa-star"></i></button>
+            <span class="rating-text" id="ratingText">Select a rating</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rv-name">Name <span>*</span></label>
+            <input type="text" id="rv-name" name="name" placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label for="rv-email">Email <span>*</span></label>
+            <input type="email" id="rv-email" name="email" placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="rv-title">Review Title <span>*</span></label>
+          <input type="text" id="rv-title" name="title" placeholder="Sum up your experience in a few words" />
+        </div>
+
+        <div class="form-group">
+          <label for="rv-message">Your Review <span>*</span></label>
+          <textarea id="rv-message" name="message" rows="5" placeholder="What did you like or dislike? How did you use this product?"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary-custom form-submit">
+          Submit Review <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/product-details.js"></script>
+</body>
+</html>

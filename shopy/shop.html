@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse the full ShopMart catalogue. Filter by category, price and brand, sort by latest or price, and discover curated luxury products." />
+  <meta name="theme-color" content="#C8A45D" />
+
+  <title>Shop | ShopMart</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%8D%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/shop.css" />
+  <link rel="stylesheet" href="css/resp.css" />
+</head>
+
+<body>
+
+  <!-- =============== PAGE LOADER =============== -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-wrap">
+      <div class="loader-spinner"></div>
+      <span class="loader-brand">Shop<span>Mart</span></span>
+    </div>
+  </div>
+
+  <!-- =============== ANNOUNCEMENT =============== -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p>Complimentary shipping on orders over $200 &nbsp;|&nbsp; Use code <strong>LUXE10</strong> for 10% off your first order</p>
+    </div>
+  </div>
+
+  <!-- =============== HEADER =============== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-inner">
+          <a href="index.html" class="logo" aria-label="ShopMart Home">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Mart</span></span>
+          </a>
+          <form class="header-search" role="search" onsubmit="return false;" aria-label="Site search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="search" placeholder="Search products..." aria-label="Search products" />
+            <button type="submit" class="search-submit" aria-label="Search"><span class="search-submit-text">Search</span><i class="fa-solid fa-magnifying-glass search-submit-icon"></i></button>
+          </form>
+          <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="header-actions">
+            <a href="#" class="action-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><span class="badge-count">3</span></a>
+            <a href="#" class="action-btn" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">5</span></a>
+            <a href="login.html" class="action-btn action-signin" aria-label="Sign in"><i class="fa-regular fa-user"></i></a>
+            <div class="auth-buttons">
+              <a href="login.html" class="btn-login">Login</a>
+              <a href="signup.html" class="btn-signup">Signup</a>
+            </div>
+
+            <div class="user-menu" id="userMenu">
+              <button type="button" class="user-menu-toggle" aria-label="Account menu" aria-haspopup="true">
+                <span class="user-avatar">JD</span>
+                <i class="fa-solid fa-chevron-down user-chevron"></i>
+              </button>
+              <div class="user-menu-dropdown" role="menu">
+                <div class="user-menu-head">
+                  <div class="user-info">
+                    <span class="user-avatar">JD</span>
+                    <div class="user-meta">
+                      <strong>John Doe</strong>
+                      <small>john.doe@example.com</small>
+                    </div>
+                  </div>
+                </div>
+                <ul class="user-menu-list">
+                  <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+                  <li><a href="#"><i class="fa-solid fa-bag-shopping"></i> My Orders</a></li>
+                  <li><a href="#"><i class="fa-regular fa-heart"></i> Wishlist</a></li>
+                  <li><a href="#"><i class="fa-regular fa-credit-card"></i> Payment Methods</a></li>
+                  <li><a href="#"><i class="fa-solid fa-location-dot"></i> Addresses</a></li>
+                  <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-row">
+      <div class="container">
+        <nav class="main-nav" id="mainNav" aria-label="Main">
+          <div class="mobile-drawer-head">
+            <a href="index.html" class="logo">
+              <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+              <span class="logo-text">Shop<span>Mart</span></span>
+            </a>
+            <button type="button" class="mobile-drawer-close" aria-label="Close menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <ul class="nav-list">
+            <li><a href="index.html"><span class="nav-label">Home</span></a></li>
+            <li class="has-dropdown">
+              <a href="shop.html" class="active"><span class="nav-label">Shop <i class="fa-solid fa-chevron-down"></i></span></a>
+              <ul class="dropdown-menu-custom">
+                <li><a href="shop.html?cat=watches">Watches</a></li>
+                <li><a href="shop.html?cat=eyewear">Eyewear</a></li>
+                <li><a href="shop.html?cat=wallets">Wallets</a></li>
+                <li><a href="shop.html?cat=furniture">Furniture</a></li>
+                <li><a href="shop.html?cat=bracelets">Bracelets</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#offers"><span class="nav-label">Offers</span></a></li>
+            <li><a href="index.html#trending"><span class="nav-label">Trending</span></a></li>
+            <li><a href="#"><span class="nav-label">Journal</span></a></li>
+            <li><a href="contact.html"><span class="nav-label">Contact</span></a></li>
+          </ul>
+
+          <div class="mobile-drawer-foot">
+            <a href="login.html" class="mobile-cta-btn">
+              <i class="fa-regular fa-user"></i> Sign in / Register
+            </a>
+            <div class="mobile-quick-links">
+              <a href="#"><i class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i><span>Orders</span></a>
+              <a href="contact.html"><i class="fa-solid fa-headset"></i><span>Help</span></a>
+            </div>
+            <div class="mobile-social">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="mobile-tagline">&copy; 2026 ShopMart &mdash; Crafted with care</p>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- =============== PAGE BANNER =============== -->
+  <section class="page-banner shop-banner" aria-label="Shop">
+    <div class="container">
+      <div class="page-banner-inner">
+        <span class="section-tag" style="color: var(--primary);">All Products</span>
+        <h1>Shop The <em>Collection</em></h1>
+        <p>Refine the catalogue by category, price and brand — sort by what matters and discover pieces that match your taste.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== BREADCRUMB =============== -->
+  <div class="breadcrumb-wrap">
+    <div class="container">
+      <ul class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li>Shop</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =============== SHOP MAIN =============== -->
+  <section class="shop-section">
+    <div class="container">
+
+      <!-- Toolbar -->
+      <div class="shop-toolbar reveal">
+        <div class="toolbar-left">
+          <button type="button" class="filter-toggle-btn" id="filterToggleBtn" aria-label="Open filters">
+            <i class="fa-solid fa-sliders"></i> Filters
+          </button>
+          <p class="result-count">
+            Showing <span id="shownCount">0</span> of <span id="totalCount">0</span> products
+          </p>
+        </div>
+
+        <div class="toolbar-right">
+          <div class="view-switch" role="tablist" aria-label="View mode">
+            <button type="button" class="view-btn active" data-view="grid" aria-label="Grid view"><i class="fa-solid fa-table-cells-large"></i></button>
+            <button type="button" class="view-btn" data-view="list" aria-label="List view"><i class="fa-solid fa-list"></i></button>
+          </div>
+
+          <div class="sort-wrap">
+            <label for="sortSelect" class="sort-label">Sort by:</label>
+            <div class="sort-select-wrap">
+              <select id="sortSelect" class="sort-select" aria-label="Sort products">
+                <option value="latest">Latest</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="popular">Most Popular</option>
+              </select>
+              <i class="fa-solid fa-chevron-down sort-chevron"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layout: Sidebar + Products -->
+      <div class="shop-layout">
+
+        <!-- ===== SIDEBAR FILTERS ===== -->
+        <aside class="shop-sidebar" id="shopSidebar" aria-label="Product filters">
+
+          <!-- Mobile drawer header -->
+          <div class="sidebar-mobile-head">
+            <h3>Filters</h3>
+            <button type="button" class="sidebar-close" id="sidebarCloseBtn" aria-label="Close filters">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Active filters bar -->
+          <div class="filter-active-bar" id="activeFilterBar" hidden>
+            <div class="active-bar-head">
+              <span>Active Filters</span>
+              <button type="button" class="clear-all-btn" id="clearAllBtn">Clear All</button>
+            </div>
+            <div class="active-chips" id="activeChips"></div>
+          </div>
+
+          <!-- CATEGORY -->
+          <div class="filter-block open">
+            <button type="button" class="filter-head">
+              <span>Category</span>
+              <i class="fa-solid fa-chevron-down filter-chevron"></i>
+            </button>
+            <div class="filter-body">
+              <ul class="checklist">
+                <li>
+                  <label class="check-item">
+                    <input type="checkbox" name="category" value="fashion" />
+                    <span class="check-box"></span>
+                    <span class="check-label">Fashion</span>
+                    <span class="check-count" data-count-cat="fashion">0</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item">
+                    <input type="checkbox" name="category" value="accessories" />
+                    <span class="check-box"></span>
+                    <span class="check-label">Accessories</span>
+                    <span class="check-count" data-count-cat="accessories">0</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item">
+                    <input type="checkbox" name="category" value="watches" />
+                    <span class="check-box"></span>
+                    <span class="check-label">Watches</span>
+                    <span class="check-count" data-count-cat="watches">0</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item">
+                    <input type="checkbox" name="category" value="footwear" />
+                    <span class="check-box"></span>
+                    <span class="check-label">Footwear</span>
+                    <span class="check-count" data-count-cat="footwear">0</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item">
+                    <input type="checkbox" name="category" value="eyewear" />
+                    <span class="check-box"></span>
+                    <span class="check-label">Eyewear</span>
+                    <span class="check-count" data-count-cat="eyewear">0</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item">
+                    <input type="checkbox" name="category" value="bags" />
+                    <span class="check-box"></span>
+                    <span class="check-label">Bags &amp; Wallets</span>
+                    <span class="check-count" data-count-cat="bags">0</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item">
+                    <input type="checkbox" name="category" value="furniture" />
+                    <span class="check-box"></span>
+                    <span class="check-label">Furniture</span>
+                    <span class="check-count" data-count-cat="furniture">0</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PRICE RANGE -->
+          <div class="filter-block open">
+            <button type="button" class="filter-head">
+              <span>Price Range</span>
+              <i class="fa-solid fa-chevron-down filter-chevron"></i>
+            </button>
+            <div class="filter-body">
+
+              <div class="price-slider" id="priceSlider">
+                <div class="slider-track"></div>
+                <div class="slider-fill" id="sliderFill"></div>
+                <input type="range" id="priceMinRange" min="0" max="2000" step="10" value="0" aria-label="Minimum price" />
+                <input type="range" id="priceMaxRange" min="0" max="2000" step="10" value="2000" aria-label="Maximum price" />
+              </div>
+
+              <div class="price-inputs">
+                <div class="price-input-group">
+                  <span class="currency">$</span>
+                  <input type="number" id="priceMinInput" min="0" max="2000" value="0" aria-label="Min price" />
+                </div>
+                <span class="price-sep">—</span>
+                <div class="price-input-group">
+                  <span class="currency">$</span>
+                  <input type="number" id="priceMaxInput" min="0" max="2000" value="2000" aria-label="Max price" />
+                </div>
+              </div>
+
+              <button type="button" class="price-apply-btn" id="priceApplyBtn">Apply</button>
+            </div>
+          </div>
+
+          <!-- BRAND -->
+          <div class="filter-block open">
+            <button type="button" class="filter-head">
+              <span>Brand</span>
+              <i class="fa-solid fa-chevron-down filter-chevron"></i>
+            </button>
+            <div class="filter-body">
+              <div class="brand-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="brandSearch" placeholder="Search brand..." aria-label="Search brand" />
+              </div>
+              <ul class="checklist scroll-list" id="brandList">
+                <li><label class="check-item"><input type="checkbox" name="brand" value="Aurora" /><span class="check-box"></span><span class="check-label">Aurora</span><span class="check-count" data-count-brand="Aurora">0</span></label></li>
+                <li><label class="check-item"><input type="checkbox" name="brand" value="Heritage" /><span class="check-box"></span><span class="check-label">Heritage</span><span class="check-count" data-count-brand="Heritage">0</span></label></li>
+                <li><label class="check-item"><input type="checkbox" name="brand" value="Velluto" /><span class="check-box"></span><span class="check-label">Velluto</span><span class="check-count" data-count-brand="Velluto">0</span></label></li>
+                <li><label class="check-item"><input type="checkbox" name="brand" value="Maison" /><span class="check-box"></span><span class="check-label">Maison</span><span class="check-count" data-count-brand="Maison">0</span></label></li>
+                <li><label class="check-item"><input type="checkbox" name="brand" value="Atelier" /><span class="check-box"></span><span class="check-label">Atelier</span><span class="check-count" data-count-brand="Atelier">0</span></label></li>
+                <li><label class="check-item"><input type="checkbox" name="brand" value="Ember" /><span class="check-box"></span><span class="check-label">Ember</span><span class="check-count" data-count-brand="Ember">0</span></label></li>
+                <li><label class="check-item"><input type="checkbox" name="brand" value="Nordica" /><span class="check-box"></span><span class="check-label">Nordica</span><span class="check-count" data-count-brand="Nordica">0</span></label></li>
+                <li><label class="check-item"><input type="checkbox" name="brand" value="Solis" /><span class="check-box"></span><span class="check-label">Solis</span><span class="check-count" data-count-brand="Solis">0</span></label></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- RATING -->
+          <div class="filter-block">
+            <button type="button" class="filter-head">
+              <span>Customer Rating</span>
+              <i class="fa-solid fa-chevron-down filter-chevron"></i>
+            </button>
+            <div class="filter-body">
+              <ul class="checklist rating-list">
+                <li>
+                  <label class="check-item">
+                    <input type="radio" name="rating" value="4" />
+                    <span class="check-radio"></span>
+                    <span class="check-label rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                      &amp; up
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item">
+                    <input type="radio" name="rating" value="3" />
+                    <span class="check-radio"></span>
+                    <span class="check-label rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                      &amp; up
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="check-item">
+                    <input type="radio" name="rating" value="2" />
+                    <span class="check-radio"></span>
+                    <span class="check-label rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                      &amp; up
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Mobile drawer footer (apply / reset) -->
+          <div class="sidebar-mobile-foot">
+            <button type="button" class="btn btn-outline-custom" id="resetMobileBtn">Reset</button>
+            <button type="button" class="btn btn-primary-custom" id="applyMobileBtn">Show Results</button>
+          </div>
+        </aside>
+
+        <!-- ===== PRODUCTS COLUMN ===== -->
+        <div class="shop-content">
+
+          <!-- Active filter pills (visible on top of grid for desktop too) -->
+          <div class="content-active-pills" id="contentActivePills" hidden></div>
+
+          <!-- Product grid (rendered by JS) -->
+          <div class="product-grid shop-grid" id="productGrid"></div>
+
+          <!-- Empty state -->
+          <div class="shop-empty" id="shopEmpty" hidden>
+            <div class="empty-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>No products match your filters</h3>
+            <p>Try adjusting your filters or clearing them to see more products.</p>
+            <button type="button" class="btn btn-primary-custom" id="emptyResetBtn">Reset Filters</button>
+          </div>
+
+          <!-- Load more -->
+          <div class="load-more-wrap" id="loadMoreWrap">
+            <p class="load-more-info"><span id="loadShown">0</span> of <span id="loadTotal">0</span> products shown</p>
+            <div class="load-more-bar"><div class="load-more-fill" id="loadMoreFill"></div></div>
+            <button type="button" class="load-more-btn" id="loadMoreBtn">
+              <span class="lm-text">Load More</span>
+              <span class="lm-spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sidebar overlay for mobile -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- =============== NEWSLETTER =============== -->
+  <section class="newsletter-section" aria-label="Newsletter signup">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="newsletter-text">
+          <h2>Join Our <em>Inner Circle</em></h2>
+          <p>Subscribe to receive 10% off your first order, early access to drops and curated journal stories.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email address" aria-label="Email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Mart</span></span>
+          </a>
+          <p>A curated boutique for premium fashion, accessories, watches, furniture and more. Quality crafted by artisans.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Journal</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="shop.html?cat=watches">Watches</a></li>
+            <li><a href="shop.html?cat=eyewear">Eyewear</a></li>
+            <li><a href="shop.html?cat=bags">Wallets</a></li>
+            <li><a href="shop.html?cat=furniture">Furniture</a></li>
+            <li><a href="shop.html?cat=accessories">Bracelets</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Get in Touch</h3>
+          <ul class="contact-info">
+            <li><i class="fa-solid fa-location-dot"></i> 123 Boutique St, NY 10001</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fa-solid fa-envelope"></i> support@shopmart.com</li>
+            <li><i class="fa-solid fa-clock"></i> Mon - Fri: 9AM - 8PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShopMart. All rights reserved.</p>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa" aria-label="Visa"></i>
+          <i class="fa-brands fa-cc-mastercard" aria-label="MasterCard"></i>
+          <i class="fa-brands fa-cc-paypal" aria-label="PayPal"></i>
+          <i class="fa-brands fa-cc-amex" aria-label="American Express"></i>
+          <i class="fa-brands fa-cc-apple-pay" aria-label="Apple Pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- =============== TOAST =============== -->
+  <div class="toast-msg" id="toastMsg">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText">Added to cart!</span>
+  </div>
+
+  <!-- =============== SCRIPTS =============== -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

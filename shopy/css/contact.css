@@ -1,0 +1,403 @@
+/* =====================================================
+   CONTACT PAGE STYLESHEET
+   ===================================================== */
+
+/* =====================================================
+   CONTACT BANNER (extends .page-banner from style.css)
+   ===================================================== */
+.contact-banner::before {
+  background:
+    radial-gradient(60% 80% at 80% 20%, rgba(200, 164, 93, 0.22), transparent 60%),
+    radial-gradient(50% 60% at 15% 90%, rgba(200, 164, 93, 0.1), transparent 60%),
+    linear-gradient(180deg, var(--dark), var(--secondary-soft));
+}
+
+/* =====================================================
+   INFO CARDS
+   ===================================================== */
+.contact-info-section {
+  background: var(--bg);
+  padding: 90px 0 30px;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.info-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 36px 28px;
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+  border-color: transparent;
+}
+
+.info-card:hover::before { transform: scaleX(1); }
+
+.info-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 22px;
+  transition: all var(--transition);
+}
+
+.info-card:hover .info-icon {
+  background: var(--primary);
+  color: #fff;
+  transform: rotate(-6deg) scale(1.05);
+}
+
+.info-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.info-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  text-transform: uppercase;
+  transition: gap var(--transition);
+}
+
+.info-link:hover { gap: 14px; color: var(--primary-dark); }
+
+/* =====================================================
+   ENQUIRY FORM (CARD + SIDE)
+   ===================================================== */
+.contact-form-section {
+  background: var(--bg);
+  padding: 70px 0 90px;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* Side */
+.contact-side .section-title {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.contact-side .section-title em {
+  font-style: italic;
+  color: var(--primary);
+}
+
+.contact-side > p {
+  color: var(--text-light);
+  margin-bottom: 26px;
+  line-height: 1.75;
+}
+
+.contact-side-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.contact-side-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.contact-side-list i {
+  color: var(--primary);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.contact-side-img {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.contact-side-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+
+.contact-side-img:hover img { transform: scale(1.05); }
+
+/* Form card */
+.contact-form {
+  background: var(--bg-white);
+  padding: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-form h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 26px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group { margin-bottom: 18px; }
+
+.form-group label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.form-group label span { color: var(--danger); }
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+  transition: all var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  background: var(--bg-white);
+  box-shadow: 0 0 0 4px rgba(200, 164, 93, 0.14);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%236B665C' d='M6 8L0 0h12z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  padding-right: 42px;
+}
+
+/* Checkbox */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 22px 0 26px;
+}
+
+.form-check input[type="checkbox"] {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.form-check label {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  letter-spacing: 0;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.form-check label a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 16px 32px;
+}
+
+/* =====================================================
+   MAP
+   ===================================================== */
+.contact-map-section {
+  background: var(--bg-soft);
+  padding: 90px 0;
+}
+
+.map-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  background: var(--bg-white);
+  position: relative;
+}
+
+.map-card iframe {
+  display: block;
+  filter: grayscale(0.3) contrast(1.05);
+  transition: filter var(--transition);
+}
+
+.map-card:hover iframe { filter: none; }
+
+/* =====================================================
+   SUPPORT CTA
+   ===================================================== */
+.contact-support-cta {
+  background: var(--bg);
+  padding: 0 0 90px;
+}
+
+.support-cta-inner {
+  background: var(--secondary);
+  border-radius: var(--radius-lg);
+  padding: 64px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 22px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.support-cta-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 100% at 50% 0%, rgba(200, 164, 93, 0.22), transparent 65%),
+    radial-gradient(50% 80% at 50% 100%, rgba(200, 164, 93, 0.12), transparent 60%);
+}
+
+.support-cta-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(200, 164, 93, 0.15);
+  border: 1px solid rgba(200, 164, 93, 0.4);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  flex-shrink: 0;
+}
+
+.support-cta-text {
+  max-width: 560px;
+}
+
+.support-cta-text h2 {
+  font-family: var(--font-display);
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.support-cta-text h2 em { font-style: italic; color: var(--primary); }
+
+.support-cta-text p {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.support-cta-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.support-cta-actions .btn-outline-custom {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.support-cta-actions .btn-outline-custom:hover {
+  background: #fff;
+  color: var(--secondary);
+  border-color: #fff;
+}

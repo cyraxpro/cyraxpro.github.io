@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with ShopMart — visit our boutique, send a message, or call our concierge team for personalised assistance." />
+  <meta name="theme-color" content="#C8A45D" />
+
+  <title>Contact Us | ShopMart</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%8D%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/resp.css" />
+</head>
+
+<body>
+
+  <!-- =============== PAGE LOADER =============== -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-wrap">
+      <div class="loader-spinner"></div>
+      <span class="loader-brand">Shop<span>Mart</span></span>
+    </div>
+  </div>
+
+  <!-- =============== ANNOUNCEMENT =============== -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p>Complimentary shipping on orders over $200 &nbsp;|&nbsp; Use code <strong>LUXE10</strong> for 10% off your first order</p>
+    </div>
+  </div>
+
+  <!-- =============== HEADER =============== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-inner">
+          <a href="index.html" class="logo" aria-label="ShopMart Home">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Mart</span></span>
+          </a>
+          <form class="header-search" role="search" onsubmit="return false;" aria-label="Site search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="search" placeholder="Search products..." aria-label="Search products" />
+            <button type="submit" class="search-submit" aria-label="Search"><span class="search-submit-text">Search</span><i class="fa-solid fa-magnifying-glass search-submit-icon"></i></button>
+          </form>
+          <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="header-actions">
+            <a href="#" class="action-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><span class="badge-count">3</span></a>
+            <a href="#" class="action-btn" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">5</span></a>
+            <a href="login.html" class="action-btn action-signin" aria-label="Sign in"><i class="fa-regular fa-user"></i></a>
+            <div class="auth-buttons">
+              <a href="login.html" class="btn-login">Login</a>
+              <a href="signup.html" class="btn-signup">Signup</a>
+            </div>
+
+            <!-- User menu (logged-in) — admin will add the auth condition -->
+            <div class="user-menu" id="userMenu">
+              <button type="button" class="user-menu-toggle" aria-label="Account menu" aria-haspopup="true">
+                <span class="user-avatar">JD</span>
+                <i class="fa-solid fa-chevron-down user-chevron"></i>
+              </button>
+              <div class="user-menu-dropdown" role="menu">
+                <div class="user-menu-head">
+                  <div class="user-info">
+                    <span class="user-avatar">JD</span>
+                    <div class="user-meta">
+                      <strong>John Doe</strong>
+                      <small>john.doe@example.com</small>
+                    </div>
+                  </div>
+                </div>
+                <ul class="user-menu-list">
+                  <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+                  <li><a href="#"><i class="fa-solid fa-bag-shopping"></i> My Orders</a></li>
+                  <li><a href="#"><i class="fa-regular fa-heart"></i> Wishlist</a></li>
+                  <li><a href="#"><i class="fa-regular fa-credit-card"></i> Payment Methods</a></li>
+                  <li><a href="#"><i class="fa-solid fa-location-dot"></i> Addresses</a></li>
+                  <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav-row">
+      <div class="container">
+        <nav class="main-nav" id="mainNav" aria-label="Main">
+
+          <!-- Mobile drawer head (only visible on mobile) -->
+          <div class="mobile-drawer-head">
+            <a href="index.html" class="logo">
+              <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+              <span class="logo-text">Shop<span>Mart</span></span>
+            </a>
+            <button type="button" class="mobile-drawer-close" aria-label="Close menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <ul class="nav-list">
+            <li><a href="index.html"><span class="nav-label">Home</span></a></li>
+            <li class="has-dropdown">
+              <a href="shop.html"><span class="nav-label">Shop <i class="fa-solid fa-chevron-down"></i></span></a>
+              <ul class="dropdown-menu-custom">
+                <li><a href="shop.html?cat=watches">Watches</a></li>
+                <li><a href="shop.html?cat=eyewear">Eyewear</a></li>
+                <li><a href="shop.html?cat=bags">Wallets</a></li>
+                <li><a href="shop.html?cat=furniture">Furniture</a></li>
+                <li><a href="shop.html?cat=accessories">Bracelets</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#offers"><span class="nav-label">Offers</span></a></li>
+            <li><a href="index.html#trending"><span class="nav-label">Trending</span></a></li>
+            <li><a href="#"><span class="nav-label">Journal</span></a></li>
+            <li><a href="contact.html" class="active"><span class="nav-label">Contact</span></a></li>
+          </ul>
+
+          <!-- Mobile drawer foot (only visible on mobile) -->
+          <div class="mobile-drawer-foot">
+            <a href="login.html" class="mobile-cta-btn">
+              <i class="fa-regular fa-user"></i> Sign in / Register
+            </a>
+            <div class="mobile-quick-links">
+              <a href="#"><i class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i><span>Orders</span></a>
+              <a href="contact.html"><i class="fa-solid fa-headset"></i><span>Help</span></a>
+            </div>
+            <div class="mobile-social">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p class="mobile-tagline">&copy; 2026 ShopMart &mdash; Crafted with care</p>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- =============== CONTACT HERO =============== -->
+  <section class="page-banner contact-banner" aria-label="Contact">
+    <div class="container">
+      <div class="page-banner-inner">
+        <span class="section-tag" style="color: var(--primary);">We're here for you</span>
+        <h1>Get In <em>Touch</em></h1>
+        <p>We'd love to hear from you. Whether it's a question, feedback, or a personalised enquiry — our concierge team responds within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-wrap">
+    <div class="container">
+      <ul class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =============== CONTACT INFO CARDS =============== -->
+  <section class="contact-info-section">
+    <div class="container">
+      <div class="contact-info-grid">
+
+        <article class="info-card reveal">
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Visit Our Boutique</h3>
+          <p>123 Boutique Street<br />Manhattan, NY 10001<br />United States</p>
+          <a href="#map" class="info-link">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="info-card reveal">
+          <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+          <h3>Call Us</h3>
+          <p>Sales: +1 (555) 123-4567<br />Support: +1 (555) 765-4321<br />Concierge: +1 (555) 999-8888</p>
+          <a href="tel:+15551234567" class="info-link">Call Now <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="info-card reveal">
+          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+          <h3>Email Us</h3>
+          <p>General: hello@shopmart.com<br />Support: support@shopmart.com<br />Press: press@shopmart.com</p>
+          <a href="mailto:hello@shopmart.com" class="info-link">Send Email <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="info-card reveal">
+          <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+          <h3>Working Hours</h3>
+          <p>Monday – Friday: 9:00 AM – 8:00 PM<br />Saturday: 10:00 AM – 6:00 PM<br />Sunday: Closed</p>
+          <a href="#enquiry" class="info-link">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== ENQUIRY FORM + IMAGE =============== -->
+  <section class="contact-form-section" id="enquiry">
+    <div class="container">
+      <div class="contact-form-grid">
+
+        <div class="contact-side reveal">
+          <span class="section-tag">Send a Message</span>
+          <h2 class="section-title">Let's Start A <em>Conversation</em></h2>
+          <p>Have a question about a product, a custom request, or need styling advice? Fill the form and our concierge team will respond within one business day.</p>
+
+          <ul class="contact-side-list">
+            <li><i class="fa-solid fa-check"></i> Personal stylist consultation</li>
+            <li><i class="fa-solid fa-check"></i> Custom-made &amp; bespoke orders</li>
+            <li><i class="fa-solid fa-check"></i> Wholesale &amp; trade enquiries</li>
+            <li><i class="fa-solid fa-check"></i> Press &amp; media partnerships</li>
+          </ul>
+
+          <div class="contact-side-img">
+            <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80" alt="ShopMart boutique" loading="lazy" />
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <h3>Enquiry Form</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Full Name <span>*</span></label>
+              <input type="text" id="cf-name" name="name" placeholder="Enter your full name" />
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email Address <span>*</span></label>
+              <input type="email" id="cf-email" name="email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-phone">Phone Number</label>
+              <input type="tel" id="cf-phone" name="phone" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject <span>*</span></label>
+              <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cf-interest">Product / Service Interested In</label>
+            <select id="cf-interest" name="interest">
+              <option value="">Select an option</option>
+              <option value="watches">Watches</option>
+              <option value="eyewear">Eyewear</option>
+              <option value="wallets">Wallets</option>
+              <option value="bracelets">Bracelets</option>
+              <option value="furniture">Furniture</option>
+              <option value="fashion">Fashion</option>
+              <option value="bespoke">Bespoke / Custom Order</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="cf-message">Message <span>*</span></label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Tell us how we can help..."></textarea>
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" id="cf-agree" />
+            <label for="cf-agree">I agree to the <a href="#">Privacy Policy</a> and consent to be contacted.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary-custom form-submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== MAP =============== -->
+  <section class="contact-map-section" id="map">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Visit Us</span>
+        <h2 class="section-title">Find Our <em>Boutique</em></h2>
+        <p class="section-sub">Drop by for a private viewing — appointments recommended</p>
+      </div>
+
+      <div class="map-card reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2655216357!2d-73.98823492416418!3d40.74844097138961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000"
+          width="100%" height="500"
+          style="border:0;" allowfullscreen=""
+          loading="lazy"
+          title="ShopMart Boutique Location"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== SUPPORT CTA =============== -->
+  <section class="contact-support-cta">
+    <div class="container">
+      <div class="support-cta-inner reveal">
+        <div class="support-cta-icon"><i class="fa-solid fa-headset"></i></div>
+        <div class="support-cta-text">
+          <h2>Need <em>Quick Help</em>?</h2>
+          <p>Our concierge support team is ready to assist you in real time. Average response time under 60 seconds.</p>
+        </div>
+        <div class="support-cta-actions">
+          <a href="#" class="btn btn-primary-custom"><i class="fa-solid fa-comments"></i> Live Chat</a>
+          <a href="tel:+15551234567" class="btn btn-outline-custom"><i class="fa-solid fa-phone"></i> Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Mart</span></span>
+          </a>
+          <p>A curated boutique for premium fashion, accessories, watches, furniture and more. Quality crafted by artisans.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Journal</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="shop.html?cat=watches">Watches</a></li>
+            <li><a href="shop.html?cat=eyewear">Eyewear</a></li>
+            <li><a href="shop.html?cat=bags">Wallets</a></li>
+            <li><a href="shop.html?cat=furniture">Furniture</a></li>
+            <li><a href="shop.html?cat=accessories">Bracelets</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Get in Touch</h3>
+          <ul class="contact-info">
+            <li><i class="fa-solid fa-location-dot"></i> 123 Boutique St, NY 10001</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fa-solid fa-envelope"></i> support@shopmart.com</li>
+            <li><i class="fa-solid fa-clock"></i> Mon - Fri: 9AM - 8PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShopMart. All rights reserved.</p>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa" aria-label="Visa"></i>
+          <i class="fa-brands fa-cc-mastercard" aria-label="MasterCard"></i>
+          <i class="fa-brands fa-cc-paypal" aria-label="PayPal"></i>
+          <i class="fa-brands fa-cc-amex" aria-label="American Express"></i>
+          <i class="fa-brands fa-cc-apple-pay" aria-label="Apple Pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <div class="toast-msg" id="toastMsg">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText">Sent successfully!</span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
